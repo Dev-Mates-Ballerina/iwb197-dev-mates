@@ -8,6 +8,9 @@ import Charity from '../pages/NewEvent/Charity';
 import Budget from '../pages/NewEvent/Budget';
 import Analytics from '../pages/Analytics/Analytics';
 import Help from '../pages/Help/Help';
+import ServiceProviderDashboard from '../serviceProvider/ServiceProviderDashboard/ServiceProviderDashboard';
+import Bookings from '../serviceProvider/Bookings/Bookings';
+import ServiceProvider from '../serviceProvider/ServiceProvider/ServiceProvider';
 
 function Routers() {
   return (
@@ -22,6 +25,9 @@ function Routers() {
         <Route exact path="/newEvent/Budget" element={<Budget />} />
         <Route exact path="/analytics" element={<Analytics />} />
         <Route exact path="/help" element={<Help />} />
+        <Route exact path="/serviceProviderDashboard" element={<ServiceProviderDashboard />} />
+        <Route exact path="/bookings" element={<Bookings />} />
+        <Route exact path="/serviceProvider" element={<ServiceProvider />} />
       </Routes>
     </BrowserRouter>
   );

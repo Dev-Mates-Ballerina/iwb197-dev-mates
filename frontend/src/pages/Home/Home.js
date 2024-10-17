@@ -5,6 +5,7 @@ import Party from '../../images/party.jpg';
 import Wedding from '../../images/weddingphoto.jpg';
 import Charity from '../../images/charityphoto.jpg';
 import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -20,7 +21,7 @@ function Home() {
                         <p>From weddings to corporate events, we make your special occasion unforgettable.</p>
                         <div className="btn">
                             <a href="//" class="btn-primary">Get Started</a>
-                            <a href="//" class="btn-primary1">Be a Service Provider</a>
+                            <Link to="/serviceProviderDashboard" class="btn-primary1">Be a Service Provider</Link>
                         </div>
                     </div>
                     </div>

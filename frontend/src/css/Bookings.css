@@ -1,0 +1,144 @@
+.bookings-page{
+    margin-left: 20rem;
+}
+main{
+    display: flex;
+    margin-left: 18rem;
+}
+.bookingsH2{
+    text-align: center;
+    margin-top: 1rem;
+    color: black;
+    margin-left: 2rem;
+}
+.booking-page-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 10px;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.active-bookings i{
+    font-size: 25px;
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+}
+.pending-bookings i{
+    font-size: 25px;
+    margin-top: 20px;
+    color: orange;
+    font-weight: bold;
+}
+.cansel-bookings i{
+    font-size: 25px;
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+}
+.fullfilled-bookings i{
+    font-size: 25px;
+    margin-top: 20px;
+    color: blue;
+    font-weight: bold;
+}
+.active-bookings{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: lightblue;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+
+}
+.booking-page-cards :hover{
+    background: lightcyan;
+} 
+
+.pending-bookings{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: lightblue;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.cansel-bookings{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color:lightblue;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.fullfilled-bookings{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: lightblue;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.ordersP{
+    font-size: small;
+}
+.ordersH6{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.recent-bookings-h4{
+    text-align: center;
+    color: blue;
+    margin-left: 2rem;
+}
+.recent-booking-table{
+    width: 80%;
+    text-align: center;
+    width: 1180px;
+    height:340px;
+    
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  overflow-y: scroll;
+}
+th{
+  background-color: lightslategray;
+  padding: 1rem;
+}
+td{
+  font-size: small;
+  padding: 1rem;
+}
+tr:nth-child(even){
+  background-color: lightblue;
+}
+
+.table tr th, .table tr td{
+  padding: 10px;
+  text-align: center;
+}
+.pButton{
+    height: 30px;
+    background-color: green;
+    border-radius: 15px;
+    width: 100px;
+    cursor: pointer;
+}
+.upButton{
+    height: 30px;
+    background-color: orange;
+    border-radius: 15px;
+    width: 100px;
+    cursor: pointer;
+}
