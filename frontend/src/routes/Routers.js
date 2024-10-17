@@ -8,6 +8,7 @@ import Charity from '../pages/NewEvent/Charity';
 import Budget from '../pages/NewEvent/Budget';
 import Login from '../pages/Auth/Login';
 import Register from '../pages/Auth/Register';
+import Photographer from '../pages/ResourcePersons/Photographer';
 
 function Routers() {
   return (
@@ -22,6 +23,7 @@ function Routers() {
         <Route exact path="/newEvent/Budget" element={<Budget />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
+        <Route exact path="/newEvent/ResourcePerson/Photographers" element={<Photographer />} />
       </Routes>
     </BrowserRouter>
   );
