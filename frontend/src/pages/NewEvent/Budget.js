@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { DataContext } from '../../context/DataProvider';
 import Navbar from '../../components/Navbar';
 import '../../css/Budget.css';
+import { Link } from 'react-router-dom';
 
 function Budget() {
   const { selectedCards, setSelectedCards } = useContext(DataContext);
@@ -29,11 +30,11 @@ function Budget() {
       <div className='main-content-budget'>
           <div className="sidebar">
             <ol className="steps">
-              <li className="step"><a href="/create-event">1</a></li>
-              <li className="step"><a href="/category">2</a></li>
-              <li className="step current"><a href="/new-event">3</a></li>
-              <li className="step"><a href="/create-event">4</a></li>
-              <li className="step"><a href="/create-event">5</a></li>
+            <li className="step"><Link to="/newEvent">1</Link></li>
+              <li className="step"><Link to="/newEvent/Category">2</Link></li>
+              <li className="step"><Link to="/newEvent/ResourcePerson">3</Link></li>
+              <li className="step"><Link to="/newEvent/Charity">4</Link></li>
+              <li className="step current"><Link href="/newEvent/Budget">5</Link></li>
             </ol>
           </div>
 
@@ -43,8 +44,9 @@ function Budget() {
               
             </div>
           {/* Cart-style UI */}
+          <h3 className='budget-list-title'>Event Budget List</h3>
+
             <div className="cart-section">
-              <h3>Event Budget Form</h3>
 
                 {selectedCards.length > 0 ? (
               <>

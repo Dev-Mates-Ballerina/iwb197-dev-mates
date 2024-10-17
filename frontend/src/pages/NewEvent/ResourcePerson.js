@@ -20,11 +20,11 @@ function ResourcePerson() {
         <div className='main-content-resource-person'>
         <div class="sidebar">
             <ol class="steps">
-                <li class="step"><a href="/create-event">1</a></li>
-                <li class="step "><a href="/category">2</a></li>
-                <li class="step current"><a href="/newEvent/ResourcePerson">3</a></li>
-                <li class="step"><a href="/create-event">4</a></li>
-                <li class="step"><a href="/create-event">5</a></li>
+            <li class="step "><Link to='/newEvent'>1</Link></li>
+                  <li class="step"><Link to='/newEvent/Category'>2</Link></li>
+                  <li class="step current"><Link to='/newEvent/ResourcePerson'>3</Link></li>
+                  <li class="step"><Link to='/newEvent/Charity'>4</Link></li>
+                  <li class="step"><Link to='/newEvent/Budget'>5</Link></li>
             </ol>
         </div>
 
@@ -44,30 +44,30 @@ function ResourcePerson() {
                     <img src={photographer} alt="Photographers" />
                     <p>Photographers</p>
                 </div></Link>
-                <a href="/new-event/entertainment"><div class="category-item">
+                <Link to="/newEvent/ResourcePerson/Entertainment"><div class="category-item">
                     <img src={dancers} alt="Entertainment" />
                     <p>Entertainment</p>
-                </div></a> 
-                <a href="/new-event/catering"><div class="category-item">
+                </div></Link> 
+                <Link to="/newEvent/ResourcePerson/Catering"><div class="category-item">
                     <img src={catering} alt="Catering" />
                     <p>Catering</p>
-                </div></a>
-                <a href="/new-event/locations"><div class="category-item">
+                </div></Link>
+                <Link to="/newEvent/ResourcePerson/Locations"><div class="category-item">
                     <img src={location} alt="Locations" />
                     <p>Locations</p>
-                </div></a>
-                <a href="/new-event/vehicles"><div class="category-item">
+                </div></Link>
+                <Link to="/newEvent/ResourcePerson/Vehicles"><div class="category-item">
                     <img src={vehicle} alt="Vehicles" />
                     <p>Vehicles</p>
-                </div></a>
-                <a href="/new-event/decorations"><div class="category-item">
+                </div></Link>
+                <Link to="/newEvent/ResourcePerson/Decorations"><div class="category-item">
                     <img src={decorations} alt="Decorations" />
                     <p>Decorations</p>
-                </div></a>
-                <a href="/new-event/electronics"><div class="category-item">
+                </div></Link>
+                <Link to="/newEvent/ResourcePerson/Electronics"><div class="category-item">
                     <img src={electronics} alt="Electronics" />
                     <p>Electronics</p>
-                </div></a>
+                </div></Link>
                 <div class="category-item">
                     <img src={other} alt="Other" />
                     <p>Other</p>

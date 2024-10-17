@@ -44,10 +44,10 @@ function Category() {
               <p className='category-selection-rightside-body-descriptionP1'>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
             </div>
             <div class="category-selection-categories">
-                <a href="/new-event/photographers"><div class="category-item">
+                <div class="category-item">
                     <img src={cultural} alt="Photographers" />
                     <p>Cultural events</p>
-                </div></a>
+                </div>
                 <div class="category-item">
                     <img src={tech} alt="Entertainment" />
                     <p>Tech events</p>

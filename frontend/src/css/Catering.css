@@ -1,0 +1,144 @@
+/* Main container styling */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main-content-catering {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar styling */
+
+/* Content area */
+
+
+.budget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.budget-header h2 {
+    margin: 0;
+}
+
+.budget {
+    display: flex;
+    align-items: center;
+}
+
+.budget img {
+    margin-right: 10px;
+}
+
+.budget h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.description {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Cards container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-catering {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.card-catering:hover {
+    transform: translateY(-5px);
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-details-catering {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-details-catering h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.card-details-catering p {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Buttons */
+.card-btn {
+    padding: 15px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.save-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
