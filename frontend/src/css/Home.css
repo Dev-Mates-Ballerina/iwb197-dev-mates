@@ -1,5 +1,5 @@
 .main-content{
-    width: 70%;
+    width: 80%;
     margin-left: 20rem;
 }
 
@@ -88,16 +88,42 @@
   
   .card h3 {
     margin-top: 15px;
-    font-size: 0.8rem;
+    font-size: 1.4rem;
   }
   
   .card p {
     margin-top: 10px;
   }
 
+.recent h3{
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  margin-left: 1.5rem;
+}
 
-
-
+table {
+  width: 93%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  margin-left: 3.5rem;
+  font-size: 1.1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+th {
+  background-color: #aeb9fa;
+  color: #333333;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
 
   
   .screen {
@@ -186,7 +212,8 @@
     flex-direction: column;
     position: relative;
     color: #2948ff;
-    font-size: 26px;
+    font-size: 30px;
+    font-weight: bold;
   }
   
   .app-title:after {
@@ -211,10 +238,11 @@
   }
   
   .app-form-group.message {
-    margin-top: 40px;
+    margin-top: 20px;
   }
   
   .app-form-group.buttons {
+    margin-top: 1.5rem;
     margin-bottom: 0;
     text-align: right;
   }
@@ -225,7 +253,7 @@
     background: none;
     border: none;
     border-bottom: 1px solid #666;
-    color: #ddd;
+    color: #000000;
     font-size: 14px;
     text-transform: uppercase;
     outline: none;
@@ -233,11 +261,12 @@
   }
   
   .app-form-control::placeholder {
-    color: #666;
+    color: #a0a0a0;
+    font-size: smaller;
   }
   
   .app-form-control:focus {
-    border-bottom-color: #ddd;
+    border-bottom-color: #838383;
   }
   
   .app-form-button {

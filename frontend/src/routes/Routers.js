@@ -7,6 +7,7 @@ import ResourcePerson from '../pages/NewEvent/ResourcePerson';
 import Charity from '../pages/NewEvent/Charity';
 import Budget from '../pages/NewEvent/Budget';
 import Analytics from '../pages/Analytics/Analytics';
+import Help from '../pages/Help/Help';
 
 function Routers() {
   return (
@@ -20,6 +21,7 @@ function Routers() {
         <Route exact path="/newEvent/Charity" element={<Charity />} />
         <Route exact path="/newEvent/Budget" element={<Budget />} />
         <Route exact path="/analytics" element={<Analytics />} />
+        <Route exact path="/help" element={<Help />} />
       </Routes>
     </BrowserRouter>
   );
