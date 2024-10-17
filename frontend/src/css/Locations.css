@@ -90,6 +90,11 @@
 }
 
 /* Buttons */
+.card-btn {
+    padding: 15px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
 
 .save-button {
     padding: 10px 20px;

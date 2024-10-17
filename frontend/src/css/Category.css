@@ -98,10 +98,8 @@
 .next-button:hover {
     background-color: darkblue;
 }
-.category-selection-main-content{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-}
+/* ------------------------------------ */
+
 .category-selection-rightside-header{
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -138,3 +136,9 @@
     border-radius: 20px;
     justify-content: center;
 }
+.budget-header{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+}
+
