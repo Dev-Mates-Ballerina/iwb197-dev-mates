@@ -1,0 +1,54 @@
+
+.container{
+    display: flex;
+  }
+
+  nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    background: #fff;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  .logo{
+    width: 80%;
+    margin: 20px auto;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .logo img{
+    width: 150px;
+  }
+
+  nav a {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 280px;
+    padding: 10px;
+  }
+  nav .fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+  }
+  a:hover{
+    background: #eee;
+  }
+  .logout{
+    position: absolute;
+    bottom: 0;
+  }
