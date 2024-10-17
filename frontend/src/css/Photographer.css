@@ -1,0 +1,79 @@
+.main-content-photographer{
+    display: flex;
+}
+
+.card-photographer {
+    display: grid;
+    grid-template-columns: 15% 70% 10%;
+    align-items: center;
+    background: linear-gradient(to right, #396afc, #2948ff);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+
+.card-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid white;
+}
+
+.card-details-photographer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-details-photographer h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-details-photographer p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.card-details-photographer p:last-child {
+    font-size: 12px;
+    color: #e0e0e0;
+}
+
+.back-button {
+    background-color: rgb(63, 63, 71);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 2rem 1rem;
+}
+
+.back-button:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.save-button {
+    background-color: rgb(27, 182, 161);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 2rem 1rem;
+}
+
+.save-button:hover {
+    background-color: rgb(18, 170, 99);
+}

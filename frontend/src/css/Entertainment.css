@@ -1,0 +1,265 @@
+.main-content-entertainment{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.sidebar1{
+    width: 5%;
+    padding: 20px;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.steps {
+    list-style-type: none;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4rem 0;
+}
+.step a{
+    color: white;
+    text-align: center;
+}
+.step a:hover{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0b15a5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4rem 0;
+}
+
+.step.complete {
+    background-color: rgba(42, 218, 150, 0.493);
+    color: black;
+}
+
+.step.current {
+    background-color: blue;
+}
+.entertainment-page-rightSide{
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+.entertainment-page-rightSideP1{
+    margin-top: 2rem;
+    font-size: larger;
+}
+.entertainment-page-rightSideP2{
+    margin-top: 2rem;
+}
+.entertainmentCategory-selection-danceH4{
+    margin-top: 2rem;
+}
+.dancingTeams{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.dance1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    width: 300px;
+}
+.dance1 img{
+    margin-left: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+.dance1 p{
+    font-size: 10px;
+}
+.dance2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 2rem;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    width: 300px;
+}
+.dance2 img{
+    margin-left: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+.dance2 p{
+    font-size: 10px;
+}
+.dance3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 2rem;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    width: 300px;
+}
+.dance3 img{
+    margin-left: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+.dance3 p{
+    font-size: 10px;
+}
+.DJteams{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.DJ1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+}
+.DJ1 img{
+    margin-left: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+.DJ1 p{
+    font-size: 10px;
+}
+.DJ2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 2rem;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+}
+.DJ2 img{
+    margin-left: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+.DJ2 p{
+    font-size: 10px;
+}
+.DJ3{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 2rem;
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+}
+.DJ3 img{
+    margin-left: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+.DJ3 p{
+    font-size: 10px;
+}
+.entertainment-back-button{
+    background-color: rgb(63, 63, 71);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 70px;
+    height: 35px;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+.entertainment-back-button:hover{
+    background-color: rgb(0, 0, 0);
+}
+.entertainment-save-button{
+    margin-top: 1rem;
+    background-color: rgb(27, 182, 161);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 70px;
+    height: 35px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.entertainment-save-button:hover{
+    background-color: rgb(18, 170, 99);
+}
+.djTeamsBH4{
+    margin-top: 2rem;
+}
+.danceH4{
+    margin-top: 2rem;
+}
+.dancingTeams-choose{
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.djTeams-choose{
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.entertainment-budget{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #2948ff;
+    padding: 6px;
+    color: #fff;
+    border-radius: 20px;
+    justify-content: center;
+    margin-right: 1rem;
+}

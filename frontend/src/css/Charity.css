@@ -1,0 +1,174 @@
+.sidebar{
+    width: 5%;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.steps {
+    list-style-type: none;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4rem 0;
+}
+.step a{
+    color: white;
+    text-align: center;
+}
+.step a:hover{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0b15a5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4rem 0;
+}
+
+.step.complete {
+    background-color: rgba(42, 218, 150, 0.493);
+    color: black;
+}
+
+.step.current {
+    background-color: blue;
+}
+.charity-main-content{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.charity-sidebar{
+    margin-left: 4rem;
+    margin-top: 4rem;
+}
+.charity-selection-rightside{
+    margin-top: 4rem;
+}
+.charity-selection-rightside-header{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+}
+.charity-selection-budget{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #2948ff;
+    padding: 6px;
+    color: #fff;
+    border-radius: 20px;
+    justify-content: center;
+    margin-right: 1rem;
+}
+.charity-selection-rightsideP{
+    margin-top: 1rem;
+}
+.charity-selection-rightsideP1{
+    font-size: 20px;
+}
+.charity-selection-rightsideP2{
+    margin-top: 2rem;
+    font-size: 15px;
+}
+.charity-selection-rightside-bodyP1{
+    margin-top: 2rem;
+    font-size: 15px;
+}
+.charity-selection-rightside-body-radioB-div{
+    margin-top: 1rem;
+}
+.contributor-label{
+    margin-left: 20px;
+}
+.charity-event-input{
+    margin-left: 4rem;
+}
+.charity-contributor-input{
+    font-size: large;
+    transform: scale(1.3);
+}
+.event-label{
+    margin-left: 20px;
+}
+.charity-selection-rightside-body-form-div{
+    margin-top: 2rem;
+}
+.charity-selection-eventName{
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+}
+.charity-selection-eventDate{
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin-left: 2rem;
+}
+.charity-selection-cause{
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin-top: 2rem;
+}
+.charity-selection-totalAmount{
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.charity-selection-more{
+    margin-top: 0.5rem;
+    color: #2948ff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.charity-selection-rightside-body-saveB{
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 16px;
+    width: 400px;
+    margin-left: 10rem;
+}
+.charity-selection-rightside-body-skipB{
+    background-color: #dfe9f5;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 16px;
+    width: 400px;
+    margin-left: 10rem;
+}
+.charity-selection-rightside-body-skipB:hover{
+    background-color: gray;
+}
+.charity-event-input {
+    transform: scale(1.3);
+    margin-right: 5px;  
+}
+

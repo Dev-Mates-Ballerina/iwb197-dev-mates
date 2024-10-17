@@ -1,0 +1,36 @@
+.main-content-budget{
+    display: flex;
+    
+}
+.budget-list-title{
+    margin: 1rem 0;
+}
+.cart-section{
+    margin: 2rem 0;
+    margin-left: 2rem;
+}
+
+.card-budget{
+    display: grid;
+    grid-template-columns: 60% 20% 15%;
+    width: 100%;
+    background-color: #2949ffcb;	
+    gap: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 15px;
+    color: white;
+    padding: 0.4rem;
+    align-items: center;
+    justify-content: end;
+}
+
+.card-budget-delete button{
+    background-color: #ff4d4d;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0.5rem 0;
+}
