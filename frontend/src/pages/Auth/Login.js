@@ -12,13 +12,19 @@ const Login = () => {
   const [error, setError] = useState(null);
   const [loginError, setLoginError] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false); // For admin login
   const navigate = useNavigate(); // Use navigate for redirection
 
+  // Admin credentials (hardcoded for testing)
+  const adminCredentials = {
+    email: 'admin@gmail.com',
+    password: 'admin123',
+  };
 
   // Fetch all registered users from the database
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:8081/register");
+      const response = await fetch('http://localhost:8081/register');
       const data = await response.json();
       setUsers(data);
     } catch (error) {
@@ -39,21 +45,37 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  console.log('Form Data:', formData);  // Check form data
-  console.log('Users:', users);  // Check the users array
-  
-  const user = users.find((u) => u.email === formData.email && u.password === formData.password);
-  
-  if (user) {
-    // Authentication successful
-    setIsAuthenticated(true);
-    setLoginError(null);
-    navigate('/');
-  } else {
-    // Authentication failed
-    setIsAuthenticated(false);
-    setLoginError("Invalid email or password. Please try again.");
-  }
+    // console.log('Form Data:', formData); // Check form data
+    // console.log('Users:', users); // Check the users array
+
+    // Admin login
+    if (
+      formData.email === adminCredentials.email &&
+      formData.password === adminCredentials.password
+    ) {
+      setIsAdmin(true);
+      setIsAuthenticated(true);
+      setLoginError(null);
+      navigate('/'); // Redirect to admin dashboard
+      return;
+    }
+
+    // Regular user login
+    const user = users.find(
+      (u) => u.email === formData.email && u.password === formData.password
+    );
+
+    if (user) {
+      // Authentication successful
+      setIsAuthenticated(true);
+      setIsAdmin(false);
+      setLoginError(null);
+      navigate('/'); // Redirect to regular user homepage
+    } else {
+      // Authentication failed
+      setIsAuthenticated(false);
+      setLoginError('Invalid email or password. Please try again.');
+    }
   };
 
   // Fetch users when the component mounts
@@ -64,50 +86,52 @@ const Login = () => {
   return (
     <div className='login'>
       <div className='login-img'>
-        <img src={logo} alt="" width='400px' />
+        <img src={logo} alt='Logo' width='400px' />
       </div>
 
       <div className='wrapper'>
-        <h2>Login</h2>
+        <h2>{isAdmin ? 'Admin Login' : 'Login'}</h2>
 
         {error && <p>{error.message}</p>}
 
         {isAuthenticated ? (
-          <p>Welcome back!</p>
+          <p>Welcome {isAdmin ? 'Admin' : 'back'}!</p>
         ) : (
           <form onSubmit={handleSubmit}>
-            <div className="input-box">
+            <div className='input-box'>
               <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
+                type='email'
+                name='email'
+                placeholder='Enter your email'
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="input-box">
+            <div className='input-box'>
               <input
-                type="password"
-                name="password"
-                placeholder="Enter your password"
+                type='password'
+                name='password'
+                placeholder='Enter your password'
                 value={formData.password}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="input-box button">
-              <input type="Submit" value="Login" />
+            <div className='input-box button'>
+              <input type='submit' value='Login' />
             </div>
             {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
-            <div className="text">
-              <h3>Don't have an account? <a href="/register">Register now</a></h3>
+            <div className='text'>
+              <h3>
+                Don't have an account? <a href='/register'>Register now</a>
+              </h3>
             </div>
           </form>
         )}
       </div>
     </div>
   );
-}
+};
 
 export default Login;
