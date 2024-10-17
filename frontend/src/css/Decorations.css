@@ -89,13 +89,13 @@
     margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
 }
 .decoration1{
     display: grid;
     grid-template-columns: 40% 60%;
     background-color: lightblue;
     border-radius: 10px;
-    padding: 10px;
     align-items: center;
 }
 .decoration1 img{
@@ -106,9 +106,9 @@
     margin-top: 1rem;
 }
 .decoration1 p{
-    font-size: 10px;
+    font-size: 14px;
 }
-.decoration2{
+/* .decoration2{
     display: grid;
     grid-template-columns: 40% 60%;
     margin-left: 2rem;
@@ -208,10 +208,10 @@
 }
 .decoration6 p{
     font-size: 10px;
-}
+} */
 
 .decorationText{
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 .decorationText p1{
     font-weight: bold;
