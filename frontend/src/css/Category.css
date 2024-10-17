@@ -1,0 +1,124 @@
+.sidebar {
+    width: 5%;
+    padding: 20px;
+    justify-content: space-between;
+    margin-left: 20rem;
+}
+
+.steps {
+    list-style-type: none;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4rem 0;
+}
+.step a{
+    color: white;
+    text-align: center;
+}
+.step a:hover{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0b15a5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4rem 0;
+}
+
+.step.complete {
+    background-color: rgba(42, 218, 150, 0.493);
+    color: black;
+}
+
+.step.current {
+    background-color: blue;
+}
+.description {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 3rem;
+}
+
+.category-item {
+    border: 2px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.category-item:hover {
+    border-color: blue;
+}
+
+.category-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    font-size: 14px;
+}
+
+.next-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 2rem 1rem;
+}
+
+.next-button:hover {
+    background-color: darkblue;
+}
+/* ------------------------------------ */
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.category-selection-rightside-header{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+}
+
+.budget{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #2948ff;
+    padding: 6px;
+    color: #fff;
+    border-radius: 20px;
+    justify-content: center;
+}
