@@ -8,7 +8,7 @@ function Bookings() {
       <SPNavbar/>
       <div className="main-content">
       <div class="bookings-page">
-        <h2 class="bookingsH2">Bookings Page</h2>
+        <h2>Bookings Page</h2>
         <div class="booking-page-cards">
             <div class='active-bookings'>
                 <p class='ordersP'>Active</p>
