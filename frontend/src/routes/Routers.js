@@ -11,6 +11,8 @@ import Help from '../pages/Help/Help';
 import ServiceProviderDashboard from '../serviceProvider/ServiceProviderDashboard/ServiceProviderDashboard';
 import Bookings from '../serviceProvider/Bookings/Bookings';
 import ServiceProvider from '../serviceProvider/ServiceProvider/ServiceProvider';
+import Account from '../pages/Account/Account';
+import Accounts from '../serviceProvider/Accounts/Accounts';
 
 function Routers() {
   return (
@@ -28,6 +30,8 @@ function Routers() {
         <Route exact path="/serviceProviderDashboard" element={<ServiceProviderDashboard />} />
         <Route exact path="/bookings" element={<Bookings />} />
         <Route exact path="/serviceProvider" element={<ServiceProvider />} />
+        <Route exact path="/account" element={<Account />} />
+        <Route exact path="/accounts" element={<Accounts />} />
       </Routes>
     </BrowserRouter>
   );

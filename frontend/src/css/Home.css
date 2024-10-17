@@ -30,17 +30,6 @@
     color: black;
   }
 
-  .btn-primary{
-    background-color: #2948ff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 2rem;
-    
-  }
   .btn-primary1{
     background-color: transparent;
     color: blue;
@@ -65,17 +54,6 @@
   .btn{
     display: flex;
     justify-content: center;
-  }
-  .btn-primary:hover{
-    background-color: #2035ac;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 2rem;
-    
   }
   /* Services Section */
   .services12 {

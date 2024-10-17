@@ -35,6 +35,11 @@ function Navbar() {
             <span class="nav-item">Help</span>
             </Link></li>
 
+            <li><Link to='/account'>
+            <i class="fas fa-user"></i>
+            <span class="nav-item">Account</span>
+            </Link></li>
+
             <li><a href="" class="logout">
             <i class="fas fa-sign-out-alt"></i>
             <span class="nav-item">Log out</span>

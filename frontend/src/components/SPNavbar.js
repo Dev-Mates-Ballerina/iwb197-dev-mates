@@ -25,9 +25,14 @@ function Navbar() {
                 </Link>
             </li>
             
-            <li><Link to='/serviceProvider'>
+            <li><Link to='/accounts'>
             <i class="fas fa-user"></i>
             <span class="nav-item">Accounts</span>
+            </Link></li>
+
+            <li><Link to='/serviceProvider'>
+            <i class="fas fa-user"></i>
+            <span class="nav-item">Register</span>
             </Link></li>
 
             <li><a href="" class="logout">

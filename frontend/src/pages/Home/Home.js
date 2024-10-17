@@ -20,7 +20,7 @@ function Home() {
                         <h2>Plan Your Perfect Event</h2>
                         <p>From weddings to corporate events, we make your special occasion unforgettable.</p>
                         <div className="btn">
-                            <a href="//" class="btn-primary">Get Started</a>
+                            <Link to="#" class="btn-primary1">Be a Organizer</Link>
                             <Link to="/serviceProviderDashboard" class="btn-primary1">Be a Service Provider</Link>
                         </div>
                     </div>
