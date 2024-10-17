@@ -27,20 +27,20 @@ function Home() {
                     </div>
                 </section>
 
-                <section class="services">
+                <section class="services12">
                     <div class="container">
-                    <div class="service-cards">
-                        <div class="card">
+                    <div class="service-cards1">
+                        <div class="card1">
                         <img src={Wedding} alt="Wedding Planning"/>
                         <h3>Wedding Planning</h3>
                         <p>We help you create your dream wedding with attention to every detail.</p>
                         </div>
-                        <div class="card">
+                        <div class="card1">
                         <img src={Charity} alt="Corporate Events"/>
                         <h3>Corporate Events</h3>
                         <p>Professional event planning for meetings, conferences, and more.</p>
                         </div>
-                        <div class="card">
+                        <div class="card1">
                         <img src={Party} alt="Parties"/>
                         <h3>Private Parties</h3>
                         <p>From birthdays to anniversaries, we make every celebration special.</p>

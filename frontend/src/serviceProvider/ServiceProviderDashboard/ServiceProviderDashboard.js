@@ -2,6 +2,7 @@ import React from 'react'
 import SPNavbar from '../../components/SPNavbar'
 import '../../css/ServiceProviderDashboard.css'
 import proicon2 from '../../images/proicon2.png'
+import { Link } from 'react-router-dom';
 
 function ServiceProviderDashboard() {
   return (
@@ -25,7 +26,7 @@ function ServiceProviderDashboard() {
                 <div class="upcoming-bookings-cards">
                     <h2>Upcoming Bookings</h2>
                     <p6>You have 3 upcoming bookings.</p6>
-                    <a href="#" class="btn-primary">View Bookings</a>
+                    <Link to="/bookings" class="btn-primary">View Bookings</Link>
                 </div>
     
 
