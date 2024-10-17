@@ -1,8 +1,7 @@
-.sidebar {
+.sidebar{
     width: 5%;
     padding: 20px;
     justify-content: space-between;
-    margin-left: 20rem;
 }
 
 .steps {
@@ -172,3 +171,4 @@
     transform: scale(1.3);
     margin-right: 5px;  
 }
+

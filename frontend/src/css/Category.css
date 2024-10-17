@@ -98,8 +98,7 @@
 .next-button:hover {
     background-color: darkblue;
 }
-/* ------------------------------------ */
-.main-content{
+.category-selection-main-content{
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
