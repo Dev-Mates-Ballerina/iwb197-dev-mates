@@ -1,15 +1,12 @@
-.bookings-page{
-    margin-left: 20rem;
-}
-main{
+.main-content{
     display: flex;
-    margin-left: 18rem;
+    flex-direction: row;
 }
+
 .bookingsH2{
     text-align: center;
     margin-top: 1rem;
-    color: black;
-    margin-left: 2rem;
+    color: #2948ff;
 }
 .booking-page-cards{
     display: grid;
@@ -108,7 +105,7 @@ main{
     
 }
 table{
-  width: 100%;
+  width: 70%;
   border-collapse: collapse;
   overflow-y: scroll;
 }
