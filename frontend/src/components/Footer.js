@@ -1,6 +1,5 @@
 import React from 'react'
 import '../css/Footer.css';
-import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -13,9 +12,9 @@ function Footer() {
             <h4>Quick Links</h4>
             <ul class="menu">
                 <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
-                <li class="menu__item"><Link to='/newEvent'><a class="menu__link">New Event</a></Link></li>
-                <li class="menu__item"><a class="menu__link" href="/analytics">Analytics</a></li>
-                <li class="menu__item"><a class="menu__link" href="/help">Help</a></li>
+                <li class="menu__item"><a class="menu__link" href="//">New Event</a></li>
+                <li class="menu__item"><a class="menu__link" href="//">Analytics</a></li>
+                <li class="menu__item"><a class="menu__link" href="//">Help</a></li>
             </ul>
             </div>
 
@@ -30,8 +29,8 @@ function Footer() {
 
             <div class="footer-section contact-info">
             <h4>Contact Us</h4>
-            <p>Email: support@eventplanner.com</p>
-            <p>Phone: +1 (234) 567-8901</p>
+            <p>Email: support@PlanItNow.com</p>
+            <p>Phone: +94 76 23 75 897</p>
             </div>
         </div>
 

@@ -33,11 +33,11 @@ function Help() {
                     </div>
                 </div>
                 <div class="mision">
-                    <h3>Our Mision</h3>
+                    <h2>Our Mision</h2>
                     <p>At PlanItNow, our mission is to empower individuals and businesses by providing an easy-to-use platform that helps them plan, organize, and manage events efficiently. We believe in turning ideas into reality by offering features that simplify everything from venue booking to guest management.</p>
                 </div>
                 <div class="offer">
-                    <h4>What we offer?</h4>
+                    <h3>What we offer?</h3>
                     <p>PlanItNow allows you to create detailed event plans, set dates, and send automatic reminders to your guests.</p>
                     <p>Stay on top of every task, with an intuitive checklist system that helps you track progress and assign responsibilities.</p>
                     <p>Connect with vendors, compare services, and manage bookings directly from the app.</p>

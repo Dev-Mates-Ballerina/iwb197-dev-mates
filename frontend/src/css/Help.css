@@ -6,7 +6,8 @@
     margin: 2rem auto;
 }
 .about h1{
-    color: #0b15a5;
+    color: #2948ff;
+    margin-bottom: 1rem;
 }
 .images{
     margin-top: 2rem;
@@ -29,14 +30,13 @@
 }
 .imgO h5{
     margin-top: 1rem;
+    font-size: 17px;
 }
 .mision{
     margin-top: 3rem;
     border-bottom: black;
 }
-.mision p{
-    font-size: 15px;
-}
+
 .mision h3{
     color: #0b15a5;
 }
@@ -45,9 +45,7 @@
     border-bottom: 1px solid black;
     padding-bottom: 2rem;   
 }
-.offer p{
-    font-size: 15px;
-}
+
 .storyH{
     margin-top: 3rem;
 }
@@ -64,7 +62,6 @@
     border-radius: 15px;
 }
 .story p{
-    font-size: 15px;
     margin-left: 2rem;
     margin-top: 4rem;
     text-align: justify;
@@ -152,13 +149,11 @@
     padding: 40px;
 }
 
-h2 {
+.storyH h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
-p{
-    margin: 1rem 0;
-}
+
 
 .description {
     font-size: 16px;

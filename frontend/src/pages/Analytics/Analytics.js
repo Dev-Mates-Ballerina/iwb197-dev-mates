@@ -8,9 +8,9 @@ function Analytics() {
       <Navbar/>
       <div className="main-content">
         <section class="main">
+        <div className='analytics-main'>
           <div class="main-top">
             <h1>Event Analytics</h1>
-            <i class="fas fa-chart-line"></i>
           </div>
           <div class="main-skills">
             <div class="card">
@@ -34,7 +34,7 @@ function Analytics() {
             <div class="card">
               <i class="fas fa-hand-holding-usd"></i>
               <h3>Revenue Generated</h3>
-              <p>$150,000 in revenue.</p>
+              <p>LKR 150 000 in revenue.</p>
               <button>View Financials</button>
             </div>
           </div>
@@ -69,6 +69,7 @@ function Analytics() {
               </div>
             </div>
           </section>
+          </div>
         </section>
       </div>
 

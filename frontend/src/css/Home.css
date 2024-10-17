@@ -41,6 +41,27 @@
     margin: 2rem;
     
   }
+  .btn-primary1{
+    background-color: transparent;
+    color: blue;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 2rem;
+  }
+  .btn-primary1:hover{
+    background-color: #2948ff;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 2rem;
+    
+  }
   .btn{
     display: flex;
     justify-content: center;
@@ -105,7 +126,7 @@ table {
   width: 93%;
   border-collapse: collapse;
   margin: 20px 0;
-  margin-left: 3.5rem;
+  margin-left: 3.3rem;
   font-size: 1.1em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

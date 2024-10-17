@@ -20,6 +20,7 @@ function Home() {
                         <p>From weddings to corporate events, we make your special occasion unforgettable.</p>
                         <div className="btn">
                             <a href="//" class="btn-primary">Get Started</a>
+                            <a href="//" class="btn-primary1">Be a Service Provider</a>
                         </div>
                     </div>
                     </div>
@@ -84,7 +85,6 @@ function Home() {
                     </table>
 
                 </div>
-
         
             </div>
             <div class="screen">
