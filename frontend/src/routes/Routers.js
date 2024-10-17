@@ -8,6 +8,7 @@ import Charity from '../pages/NewEvent/Charity';
 import Budget from '../pages/NewEvent/Budget';
 import Login from '../pages/Auth/Login';
 import Register from '../pages/Auth/Register';
+
 import Photographer from '../pages/ResourcePersons/Photographer';
 import Entertainment from '../pages/ResourcePersons/Entertainment';
 import Locations from '../pages/ResourcePersons/Locations';
@@ -15,6 +16,8 @@ import Catering from '../pages/ResourcePersons/Catering';
 import Electronics from '../pages/ResourcePersons/Electronics';
 import Vehicles from '../pages/ResourcePersons/Vehicles';
 import Decorations from '../pages/ResourcePersons/Decorations';
+
+
 
 function Routers() {
   return (
