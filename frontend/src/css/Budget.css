@@ -1,16 +1,20 @@
 .main-content-budget{
     display: flex;
+    
 }
-
-.cart-section{
+.budget-list-title{
     margin: 1rem 0;
+}
+.cart-section{
+    margin: 2rem 0;
+    margin-left: 2rem;
 }
 
 .card-budget{
     display: grid;
     grid-template-columns: 60% 20% 15%;
     width: 100%;
-    background-color: #2949ffa2;	
+    background-color: #2949ffcb;	
     gap: 1rem;
     margin: 0.5rem 0;
     border-radius: 15px;
