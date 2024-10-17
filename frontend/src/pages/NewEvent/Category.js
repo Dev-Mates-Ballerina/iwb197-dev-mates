@@ -17,11 +17,12 @@ function Category() {
     <div>
       <Navbar/>
       <div className='main-content'>
+        <div className='category-selection-main-content'>
           <div className='category-selection-sidebar'>
             <div class="sidebar1">
               <ol class="steps">
-                  <li class="step current"><Link to='/newEvent'>1</Link></li>
-                  <li class="step"><Link to='/newEvent/Category'>2</Link></li>
+                  <li class="step"><Link to='/newEvent'>1</Link></li>
+                  <li class="step current"><Link to='/newEvent/Category'>2</Link></li>
                   <li class="step"><Link to='/newEvent/ResourcePerson'>3</Link></li>
                   <li class="step"><Link to='/newEvent/Charity'>4</Link></li>
                   <li class="step"><Link to='/newEvent/Budget'>5</Link></li>
@@ -41,7 +42,7 @@ function Category() {
             <div className='category-selection-rightside-body'>
             <div>
               <p class="category-selection-rightside-body-descriptionP1">What kind of event are you planning?</p>
-              <p className='category-selection-rightside-body-descriptionP1'>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
+              <p className='category-selection-rightside-body-descriptionP2'>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
             </div>
             <div class="category-selection-categories">
                 <div class="category-item">
@@ -80,7 +81,7 @@ function Category() {
             <button class="next-button">Next</button>
           </div>
           </div>
-
+        </div>
       </div>
     </div>
   )

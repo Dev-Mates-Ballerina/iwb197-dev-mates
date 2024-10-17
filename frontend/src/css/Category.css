@@ -95,7 +95,6 @@
     font-size: 16px;
     margin: 2rem 1rem;
 }
-
 .next-button:hover {
     background-color: darkblue;
 }
@@ -105,6 +104,26 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     justify-content: space-between;
+}
+.category-selection-sidebar{
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+.category-selection-rightside{
+    margin-top: 4rem;
+}
+.category-selection-rightside-body-descriptionP1{
+    font-weight: bold;
+}
+.category-selection-rightside-body-descriptionP2{
+    margin-top: 1rem;
+}
+.category-selection-categories{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 3rem;
 }
 
 .budget{
