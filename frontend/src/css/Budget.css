@@ -8,7 +8,7 @@
 }
 .budget-header-main{
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 4fr 1fr;
     gap: 4rem;
 }
 .budget-list-title{
@@ -99,14 +99,29 @@
 }
 .budget-submit-form{
     margin-top: 7rem;
-    width: 170%;
+    width: 500px;
+    background-color: #4346f7;
+    padding: 20px;
+    border-radius: 10px;
 }
 .budget-submit-form1{
     text-align: center;
     font-size: 25px;
     margin-bottom: 2rem;
+    color: white;
 }
-
+.budget-submit-form-name p{
+    color: white;
+}
+.budget-submit-form-email p{
+    color: white;
+}
+.budget-submit-form-phone p{
+    color: white;
+}
+.budget-submit-form-date p{
+    color: white;
+}
 .budget-submit-form2{
         background-color: lightblue;
         padding: 20px;

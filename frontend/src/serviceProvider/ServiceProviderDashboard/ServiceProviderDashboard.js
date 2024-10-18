@@ -39,7 +39,7 @@ function ServiceProviderDashboard() {
                 <div class="upcoming-bookings-cards">
                   <h2>Account Settings</h2>
                   <p6>Update your account information.</p6>
-                  <a href="#" class="btn-primary">Update Info</a>
+                  <Link to="/accounts" class="btn-primary">Update Info</Link>
               </div>
               </div>
 

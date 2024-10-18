@@ -2,10 +2,11 @@ import React, { useContext, useState } from 'react';
 import { DataContext } from '../../context/DataProvider';
 import Navbar from '../../components/Navbar';
 import '../../css/Budget.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import dollar from '../../images/dollar.png';
 
 function Budget() {
+  const navigate = useNavigate();
   const { selectedCards, setSelectedCards } = useContext(DataContext);
   const [name, setName] = useState(''); // Add state for name
   const [phone, setPhone] = useState(''); // Add state for phone
@@ -48,6 +49,7 @@ function Budget() {
         setSelectedCards([]);
         localStorage.removeItem('selectedCards');
         alert('Budget submitted successfully!');
+        navigate('/'); // Navigate to the homepage
       } else {
         alert('Failed to submit budget.');
       }
@@ -157,6 +159,7 @@ function Budget() {
                   <input
                     className="budget-submit-form2"
                     type="text" // Change to date input type
+                    placeholder="Date"
                     value={date}
                     onChange={(e) => setDate(e.target.value)} // Capture form input
                   />

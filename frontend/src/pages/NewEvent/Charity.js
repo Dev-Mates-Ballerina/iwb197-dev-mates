@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../css/Charity.css';
 import dollar from '../../images/dollar.png';
 
 function Charity() {
+  const navigate = useNavigate();
   const [eventName, setEventName] = useState('');
   const [eventDate, setEventDate] = useState('');
   const [cause, setCause] = useState('');
@@ -36,6 +37,7 @@ function Charity() {
 
       const result = await response.json();
       alert('Charity data saved successfully!', result);
+      navigate('/newEvent/Budget');
       // You might want to clear the form or show a success message here
     } catch (error) {
       console.error('Error saving charity data:', error);

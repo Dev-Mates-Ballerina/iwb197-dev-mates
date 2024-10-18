@@ -123,9 +123,9 @@ function CreateEvent() {
                 />
               </div>
               <div className='create-event-form-buttonDiv'>
-              <Link to='/newEvent/Category'>
+              
                 <button className='create-event-button' type='submit'>Create</button>
-              </Link>
+              
               </div>
               {error && <p className="error-message">{error.message}</p>} {/* Display error message */}
             </form>
