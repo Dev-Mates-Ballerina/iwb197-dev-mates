@@ -149,7 +149,7 @@ const isCardSelected = (cardName) => clickedButtons.includes(cardName) || select
               </div>
             </div>
 
-            <button className="entertainment-back-button">Back</button>
+            <Link to="/newEvent/ResourcePerson"><button className="back-button">Back</button></Link>
           </div>
         </div>
       </div>

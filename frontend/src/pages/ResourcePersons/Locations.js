@@ -1,5 +1,8 @@
 import React, { useContext, useState } from 'react'
 import Navbar from '../../components/Navbar'
+import loc1 from '../../images/loc1.jpeg'
+import loc2 from '../../images/loc2.jpeg'
+import loc3 from '../../images/loc3.jpeg'
 import { Link } from 'react-router-dom'
 import '../../css/Locations.css'
 import { DataContext } from '../../context/DataProvider';
@@ -12,7 +15,7 @@ function Locations() {
     {
         name: "Coofy Castle",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat temporibus commodi fugit tempore nesciunt, distinctio accusantium repudiandae.",
-        imgSrc: '/images/coofy-castle.jpg',
+        imgSrc: loc1,
         price: 100000,
         rating: 4.5,
         reviews: 1000
@@ -20,7 +23,7 @@ function Locations() {
     {
         name: "Krusty BBQ",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat temporibus commodi fugit tempore nesciunt, distinctio accusantium repudiandae.",
-        imgSrc: '/images/krusty-bbq.jpg',
+        imgSrc: loc2,
         price: 50000,
         rating: 4.5,
         reviews: 800
@@ -28,7 +31,7 @@ function Locations() {
     {
         name: "Windy Bar",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat temporibus commodi fugit tempore nesciunt, distinctio accusantium repudiandae.",
-        imgSrc: '/images/windy-bar.jpg',
+        imgSrc: loc3,
         price: 70000,
         rating: 4.5,
         reviews: 350
@@ -62,7 +65,7 @@ const isCardSelected = (cardName) => clickedButtons.includes(cardName) || select
              
             </div>
             
-            <p className="description">Select the Location you want</p>
+            <p className="description123">Select the Location you want</p>
             <p>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
           
             <div className="locations">
@@ -91,7 +94,7 @@ const isCardSelected = (cardName) => clickedButtons.includes(cardName) || select
               </div>
             </div>
             
-            <button className="entertainment-back-button">Back</button>
+            <Link to="/newEvent/ResourcePerson"><button className="back-button">Back</button></Link>
 
           </div>
         </div>

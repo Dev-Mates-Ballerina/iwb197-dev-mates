@@ -37,7 +37,7 @@ function ResourcePerson() {
                 <p class="description1">Select the Supplier Category</p>
                 <p className='description2'>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
             </div>
-            <div class="categories">
+            <div class="categories1">
                 <Link to="/newEvent/ResourcePerson/Photographers"><div class="category-item">
                     <img src={photographer} alt="Photographers" />
                     <p>Photographers</p>
@@ -72,7 +72,7 @@ function ResourcePerson() {
                 </div>
             </div>
             
-            <button class="next-button">Next</button>
+            <Link to='/newEvent/Charity' class="next-button2">Next</Link>
         </div>
         </div>
 

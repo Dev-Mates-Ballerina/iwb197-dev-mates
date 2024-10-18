@@ -116,6 +116,7 @@ function Vehicles() {
               ))}
 
                 </div>
+                <Link to="/newEvent/ResourcePerson"><button className="back-button">Back</button></Link>
             </div> 
 
           </div>

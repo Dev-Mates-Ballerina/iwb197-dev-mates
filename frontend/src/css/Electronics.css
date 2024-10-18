@@ -1,11 +1,10 @@
 
 .electronics-main-content{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 9fr;
 }
 .electronics-content{
     margin-top: 2rem;
-    margin-left: 3rem;
 }
 .electronics-budget{
     display: flex;
@@ -18,8 +17,12 @@
     justify-content: center;
     margin-right: 1rem;
 }
+.electronics-budget-header h2{
+    font-size: 30px;
+}
 .electronics-descriptionP1{
     margin-top: 1rem;
+    font-weight: bold;
 }
 .electronics-descriptionP2{
     margin-top: 1rem;

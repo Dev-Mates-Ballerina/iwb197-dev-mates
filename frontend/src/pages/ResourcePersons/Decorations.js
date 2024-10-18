@@ -177,8 +177,7 @@ function Decorations() {
                 </div> */}
               </div>  
             </div>
-              <button class="decoration-back-button">Back</button>
-              <button class="decoration-save-button">Save</button>
+            <Link to="/newEvent/ResourcePerson"><button className="back-button">Back</button></Link>
           </div>
           </div>
           </div>

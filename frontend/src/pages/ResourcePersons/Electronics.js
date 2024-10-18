@@ -115,7 +115,7 @@ function Electronics() {
                           </div>
 
                         </div>
-                        <button className="electronics-back-button">Back</button>
+                        <Link to="/newEvent/ResourcePerson"><button className="back-button">Back</button></Link>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,9 @@ import React, { useContext, useState } from 'react';
 import Navbar from '../../components/Navbar';
 import p2 from '../../images/p2.png';
 import p1 from '../../images/p1.png';
+import p3 from '../../images/p3.jpeg';
+import p4 from '../../images/p4.jpeg';
+import p5 from '../../images/p5.jpeg';
 import dollar from '../../images/dollar.png';
 import '../../css/Photographer.css';
 import '../../css/Category.css';
@@ -31,21 +34,21 @@ function Photographer() {
             name: "Dilshan Weerasinghe",
             location: "Galle, Sri Lanka",
             description: "Dilshan is known for his creative portraiture and has been featured in several international exhibitions.",
-            imgSrc: "/images/dilshan-weerasinghe.jpg",
+            imgSrc: p3,
             price: 45000
         },
         {
             name: "Kasun Jayawardena",
             location: "Jaffna, Sri Lanka",
             description: "Kasun's unique approach to event photography makes him one of the most sought-after photographers in the region.",
-            imgSrc: "/images/kasun-jayawardena.jpg",
+            imgSrc: p4,
             price: 35000
         },
         {
             name: "Shenali Fernando",
             location: "Negombo, Sri Lanka",
             description: "Shenali specializes in food and product photography and works with some of Sri Lanka's best-known brands.",
-            imgSrc: "/images/shenali-fernando.jpg",
+            imgSrc: p5,
             price: 30000
         }
     ];
@@ -105,7 +108,7 @@ function Photographer() {
                             ))}
                         </div>
 
-                        <button className="back-button">Back</button>
+                        <Link to="/newEvent/ResourcePerson"><button className="back-button">Back</button></Link>
                     </div>
                 </div>
             </div>

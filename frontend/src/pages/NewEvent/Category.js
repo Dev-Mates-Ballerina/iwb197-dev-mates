@@ -42,40 +42,56 @@ function Category() {
               <p className='category-selection-rightside-body-descriptionP2'>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
             </div>
             <div class="category-selection-categories">
+            <Link to='/newEvent/ResourcePerson'>
                 <div class="category-item">
                     <img src={cultural} alt="Photographers" />
                     <p>Cultural events</p>
                 </div>
+            </Link>
+            <Link to='/newEvent/ResourcePerson'>
                 <div class="category-item">
                     <img src={tech} alt="Entertainment" />
                     <p>Tech events</p>
                 </div>
+            </Link>
+            <Link to='/newEvent/ResourcePerson'>
                 <div class="category-item">
                     <img src={cooperate} alt="Catering" />
                     <p>Co-operate events</p>
                 </div>
+            </Link>
+            <Link to='/newEvent/ResourcePerson'>
                 <div class="category-item">
                     <img src={proms} alt="Locations" />
                     <p>Proms</p>
                 </div>
+            </Link>
+            <Link to='/newEvent/ResourcePerson'>
                 <div class="category-item">
                     <img src={party} alt="Vehicles" />
                     <p>Parties</p>
                 </div>
+            </Link>
+            <Link to='/newEvent/ResourcePerson'>
                 <div class="category-item">
                     <img src={wedding} alt="Decorations" />
                     <p>Weddings</p>
                 </div>
+            </Link>
+            <Link to='/newEvent/ResourcePerson'>
                 <div class="category-item">
                     <img src={engagement} alt="Electronics" />
                     <p>Engagements</p>
                 </div>
+            </Link>  
+            <Link to='/newEvent/ResourcePerson'>
                 <div class="category-item">
                     <img src={other} alt="Other" />
                     <p>Other</p>
                 </div>
+            </Link>
             </div>
-            <button class="next-button">Next</button>
+            <Link to='/newEvent/ResourcePerson'class="next-button1">Next</Link>
           </div>
           </div>
         </div>

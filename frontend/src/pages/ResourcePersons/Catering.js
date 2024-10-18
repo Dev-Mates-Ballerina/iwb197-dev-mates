@@ -2,6 +2,12 @@ import React, { useContext, useState } from 'react';
 import Navbar from '../../components/Navbar';
 import dollar from '../../images/dollar.png'; // Add appropriate image paths
 import '../../css/Catering.css';
+import c1 from '../../images/c1.jpg'; 
+import c2 from '../../images/c2.jpg';
+import c3 from '../../images/c3.jpg';
+import c4 from '../../images/c4.jpg';
+import c5 from '../../images/c5.jpg';
+import c6 from '../../images/c6.jpg';
 import { DataContext } from '../../context/DataProvider';
 import { Link } from 'react-router-dom';
 import '../../css/Catering.css'
@@ -16,42 +22,42 @@ function Catering() {
             description: "Discover unparalleled catering services at Warna Caterers, the #1 catering service in Colombo, Sri Lanka since 1999.",
             contact: "0711234567",
             price: 20000,
-            imgSrc: "/images/mahesh-caters.jpg" // Replace with actual image path
+            imgSrc: c1 // Replace with actual image path
         },
         {
             name: "Bashitha Catering",
             description: "Dedicated towards culinary excellence to create memorable food experiences.",
             contact: "0711234567",
             price: 40000,
-            imgSrc: "/images/bashitha-catering.jpg" // Replace with actual image path
+            imgSrc: c2 // Replace with actual image path
         },
         {
             name: "Kalana Caters",
             description: "Kalana caters is the exclusive airline caterer in Sri Lanka, a rapidly expanding hub for global travel.",
             contact: "0711234567",
             price: 20000,
-            imgSrc: "/images/kalana-caters.jpg" // Replace with actual image path
+            imgSrc: c3 // Replace with actual image path
         },
         {
             name: "Sahan Caters",
             description: "Fusion Cuisine, North Indian, Chinese & BBQ. Best Caterers in Colombo. A perfect Banquet space for all occasions.",
             contact: "0711234567",
             price: 30000,
-            imgSrc: "/images/sahan-caters.jpg" // Replace with actual image path
+            imgSrc: c4 // Replace with actual image path
         },
         {
             name: "Green Chef",
             description: "Our culinary team offers a variety of menus and can customize a menu to fulfil your outdoor catering needs.",
             contact: "0711234567",
             price: 10000,
-            imgSrc: "/images/green-chef.jpg" // Replace with actual image path
+            imgSrc: c5 // Replace with actual image path
         },
         {
             name: "Eventless Catering",
             description: "We are pleased to extend our catering services for any event within Colombo: birthday parties, cocktails, weddings.",
             contact: "0711234567",
             price: 15000,
-            imgSrc: "/images/eventless-catering.jpg" // Replace with actual image path
+            imgSrc: c6 // Replace with actual image path
         }
     ];
 
@@ -82,7 +88,7 @@ function Catering() {
                             
                         </div>
 
-                        <p className="description">Select the Catering Service you want</p>
+                        <p className="description12">Select the Catering Service you want</p>
                         <div className="cards-container">
                             {cardsData.map((card, index) => (
                                 <div className="card-catering" key={index}>
@@ -95,7 +101,7 @@ function Catering() {
                                         <p>{card.contact}</p>
                                         <p>{card.price}</p>
                                     </div>
-                                    <div className="card-btn">
+                                    <div className="card-btn1">
                                     <button
                                       className={`save-button ${isCardSelected(card.name) ? 'green' : ''}`} // Add 'green' class if selected
                                       onClick={() => handleSubmit(card)}
@@ -108,7 +114,7 @@ function Catering() {
                             ))}
                         </div>
 
-                        <button className="back-button">Back</button>
+                        <Link to="/newEvent/ResourcePerson"><button className="back-button">Back</button></Link>
                     </div>
                 </div>
             </div>

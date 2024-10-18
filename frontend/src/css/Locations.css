@@ -40,10 +40,10 @@
     font-size: 20px;
 }
 
-.description {
+.description123 {
     margin: 20px 0;
     font-size: 18px;
-    color: #555;
+    font-weight: bold;
 }
 
 /* Cards container */
@@ -66,10 +66,12 @@
     transform: translateY(-5px);
 }
 
-.card-img img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.card img{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 240px;
+    height: 150px;
+    border-radius: 15px;
 }
 
 .card-details-catering {
