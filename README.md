@@ -39,11 +39,11 @@ Welcome to **PlanItNow**, a web application designed for both event organizers a
 The application uses the following database structure:
 
 - **Database Name**: `ballerina`
-- **Tables**:
-  - `users`
-  - `budget`
-  - `charity`
-  - `events`
+- **Tables and Columns**:
+  - `users - user_id(int),name,email,password,cpassword`
+  - `budget - id(int),name,email,phone,price,uname(NULL),uphone(NULL),udate(NULL),ulocation(NULL)`
+  - `charity - id(int),name,date,cause,amount(int)`
+  - `events - id(int),name,budget(int),location,date`
 
 ## User Flow
 
