@@ -68,46 +68,70 @@ function Budget() {
           </div>
 
           <div className="content">
-            <div className="budget-budget-header">
-              <h2>Step 5</h2>
-              <div className="electronics-budget">
-                  <img src={dollar} alt="budget" width='50px'/>
-                  <h3>LKR {totalPrice}</h3>
-              </div>
-            </div>
-
-            {/* Cart-style UI */}
-            <h3 className='budget-list-title'>Event Budget List</h3>
-
-            <div className="cart-section">
-              {selectedCards.length > 0 ? (
-                <>
-                  {selectedCards.map((card, index) => (
-                    <div key={index} className="card-budget">
-                      <img src={card.imgSrc} alt=""  width='70px'/>
-                      <div className='card-budget-title'>
-                        <h3>{card.name}</h3>
-                        <p>{card.phone}</p>
-                        <p>{card.email}</p>
-                        <p>{card.location}</p>
-                      </div>
-                      <div className='card-budget-price'>
-                        <p>Price: LKR {card.price}</p>
-                      </div>
-                      <div className='card-budget-delete'>
-                        <button onClick={() => handleDelete(index)}>Delete</button>
-                      </div>
+            <div className="budget-header-main">
+                <div className="budget-header111">
+                  <div className="budget-budget-header">
+                    <h2>Step 5</h2>
+                    <div className="electronics-budget">
+                        <img src={dollar} alt="budget" width='50px'/>
+                        <h3>LKR {totalPrice}</h3>
                     </div>
-                  ))}
-                  <div className='budget-total'>
-                    <h3>Total Budget:  LKR {totalPrice}.00</h3> {/* Display total price */}
-                    <button onClick={handleSubmit}>Submit</button> 
                   </div>
-                </>
-              ) : (
-                <p>No cards selected yet.</p>
-              )}
-            </div>
+
+                  {/* Cart-style UI */}
+                  <h3 className='budget-list-title'>Event Budget List</h3>
+
+                  <div className="cart-section">
+                    {selectedCards.length > 0 ? (
+                      <>
+                        {selectedCards.map((card, index) => (
+                          <div key={index} className="card-budget">
+                            <img src={card.imgSrc} alt=""  width='70px'/>
+                            <div className='card-budget-title'>
+                              <h3>{card.name}</h3>
+                              <p>{card.phone}</p>
+                              <p>{card.email}</p>
+                              <p>{card.location}</p>
+                            </div>
+                            <div className='card-budget-price'>
+                              <p>Price: LKR {card.price}</p>
+                            </div>
+                            <div className='card-budget-delete'>
+                              <button onClick={() => handleDelete(index)}>Delete</button>
+                            </div>
+                          </div>
+                        ))}
+                        <div className='budget-total'>
+                          <h3>Total Budget:  LKR {totalPrice}.00</h3> {/* Display total price */}
+                          <button onClick={handleSubmit}>Submit</button> 
+                        </div>
+                      </>
+                    ) : (
+                      <p>No cards selected yet.</p>
+                    )}
+                    
+                  </div>
+                </div>
+                <div class="budget-submit-form">
+                    <h3 class="budget-submit-form1">Your Details</h3>
+                    <div class="budget-submit-form-name">
+                        <p>Name</p>
+                        <input class="budget-submit-form2" type="text" placeholder="Name"/>
+                    </div>
+                    <div class="budget-submit-form-phone">
+                        <p>Phone</p>
+                        <input class="budget-submit-form2" type="text" placeholder="Phone"/>
+                    </div>
+                    <div class="budget-submit-form-date">
+                        <p>Date</p>
+                        <input class="budget-submit-form2" type="text" placeholder="Date"/>
+                    </div>
+                    <div class="budget-submit-form-location">
+                        <p>Location</p>
+                        <input class="budget-submit-form2" type="text" placeholder="Location"/>
+                    </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>

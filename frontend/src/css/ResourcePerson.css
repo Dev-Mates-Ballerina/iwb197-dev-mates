@@ -31,6 +31,7 @@
     color: white;
     text-align: center;
 }
+
 .step a:hover{
     width: 40px;
     height: 40px;
@@ -63,17 +64,22 @@
 .content {
     width: 90%;
     padding: 40px;
+    margin-left: 2rem;
 }
 
-.step3{
+.budget-header{
+    margin-top: 10px;
+}
+.budget-header h2{
     font-size: 30px;
     margin-bottom: 10px;
 }
+
 .description,.description2{
     margin: 1rem 0;
 }
 
-.description {
+.description1 {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 20px;

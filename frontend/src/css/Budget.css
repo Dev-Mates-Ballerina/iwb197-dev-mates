@@ -2,12 +2,20 @@
     display: flex;
     
 }
+.budget-budget-header h2{
+    font-size: 30px;
+
+}
+.budget-header-main{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    gap: 4rem;
+}
 .budget-list-title{
     margin: 1rem 0;
 }
 .cart-section{
     margin: 2rem 0;
-    margin-left: 2rem;
 }
 .cart-section img{
     border-radius: 10px;
@@ -48,8 +56,7 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
     justify-content: space-between;
-    margin-top: 2rem;
-    margin-left: 2rem;
+    margin-top: 1rem;
 }
 
 .budget-list-title{
@@ -58,7 +65,6 @@
     font-size: 22px;
     border-bottom: 1px solid #2949ff;
     padding-bottom: 1rem;
-    margin-left: 1.5rem;
     font-weight: 500;
 }
 
@@ -91,3 +97,23 @@
     font-weight: 500;
     cursor: pointer;
 }
+.budget-submit-form{
+    margin-top: 7rem;
+    width: 170%;
+}
+.budget-submit-form1{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 2rem;
+}
+
+.budget-submit-form2{
+        background-color: lightblue;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+
+}
+
