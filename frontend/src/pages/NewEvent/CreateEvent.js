@@ -36,6 +36,9 @@ function CreateEvent() {
                   <div className='create-event-form-input'>
                     <input className='create-event-budget-input' type='text' id='budget' name='budget' required placeholder='Estimated budget'/>
                   </div>
+                  <div className='create-event-form-input'>
+                    <input className='create-event-budget-input' type='text' id='location' name='location' required placeholder='Location'/>
+                  </div>
                   <div className='create-event-form-buttonDiv'>
                     <button className='create-event-button'>Create</button>
                   </div>
