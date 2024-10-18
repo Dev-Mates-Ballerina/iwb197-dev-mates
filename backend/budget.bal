@@ -3,7 +3,7 @@ import ballerina/http;
 
 @http:ServiceConfig {
     cors: {
-        allowOrigins: ["http://localhost:3001"], // Your React app's URL (adjust to the correct port if needed)
+        allowOrigins: ["http://localhost:3000"], // Your React app's URL (adjust to the correct port if needed)
         allowHeaders: ["*"], // Use correct casing for Content-Type
         allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS","UPDATE"], // Allow necessary methods
         allowCredentials: false,
@@ -15,7 +15,7 @@ service /budget on new http:Listener(8083) {
 
     @http:ResourceConfig {
         cors: {
-            allowOrigins: ["http://localhost:3001"]
+            allowOrigins: ["http://localhost:3000"]
 
         }
     }
@@ -26,7 +26,10 @@ service /budget on new http:Listener(8083) {
     }
     // GET: Fetch all employees
 
-  
+    resource function get .() returns Budget[]|error? {
+        return getBudget();
+    }
+
     
 
 

@@ -9,13 +9,16 @@ public type User record {|
     string password;  // Only store the hashed password
     string cpassword; // Should also be hashed before storing
 |};
-
 public type Budget record {|
     int id?;
     string name;
     string email;
-    string phone;  // Only store the hashed password
-    string price; // Should also be hashed before storing
+    string phone;
+    string price;
+    string uname?;       // Optional field
+    string uphone?;      // Optional field
+    string udate?;       // Optional field
+    string ulocation?;   // Optional field
 |};
 
 public type Event record {|
@@ -80,9 +83,9 @@ isolated function getAllUsers() returns User[]|error {
 isolated function saveBudget(Budget budget) returns int|error {
     // Insert the plain text passwords into the database
     sql:ExecutionResult result = check dbClient->execute(`
-        INSERT INTO budget (id, name, email, phone, price)
+        INSERT INTO budget (id, name, email, phone, price, uname, uphone, udate, ulocation)
         VALUES (${budget.id}, ${budget.name}, ${budget.email}, 
-                ${budget.phone}, ${budget.price})
+                ${budget.phone}, ${budget.price}, ${budget.uname}, ${budget.uphone}, ${budget.udate}, ${budget.ulocation})
     `);
 
     int|string? lastInsertId = result.lastInsertId;
@@ -156,3 +159,17 @@ isolated function getAllCharities() returns Charity[]|error {
     return charities;
 }
 
+
+
+isolated function getBudget() returns Budget[]|error {
+    Budget[] budgets = [];
+    stream<Budget, error?> resultStream = dbClient->query(
+        `SELECT * FROM budget`
+    );
+    check from Budget budget in resultStream
+        do {
+            budgets.push(budget);
+        };
+    check resultStream.close();
+    return budgets;
+}
