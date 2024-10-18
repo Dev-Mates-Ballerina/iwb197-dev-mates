@@ -32,7 +32,7 @@ Welcome to **PlanItNow**, a web application designed for both event organizers a
 
 - **Frontend**: ReactJS
 - **Backend**: Ballerina
-- **Database**: Ballerina Database
+- **Database**: Mysql
 
 ## Database Structure
 
