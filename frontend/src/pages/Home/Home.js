@@ -88,6 +88,44 @@ function Home() {
                 </div>
         
             </div>
+
+            <div className="charity-events">
+                <h3>Charity Events</h3>
+                <div class="charity-table">
+                    <table>
+                        <tr>
+                            <th>Event ID</th>
+                            <th>Charity Name</th>
+                            <th>Charity Budget</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                        </tr>
+                        <tr>
+                            <td>001</td>
+                            <td>Hackathon</td>
+                            <td>LKR 5 000</td>
+                            <td>2024-10-25</td>
+                            <td>Colombo</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Tech Conference</td>
+                            <td>LKR 8 000</td>
+                            <td>2024-11-15</td>
+                            <td>Kurunegala</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Startup Expo</td>
+                            <td>LKR 3 000</td>
+                            <td>2024-12-05</td>
+                            <td>Kandy</td>
+                        </tr>
+                    </table>
+
+                </div>
+        
+            </div>
             <div class="screen">
                 <div class="screen-body">
                     <div class="screen-body-item left">
