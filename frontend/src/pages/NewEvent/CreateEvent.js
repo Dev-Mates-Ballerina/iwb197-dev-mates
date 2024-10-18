@@ -57,9 +57,7 @@ function CreateEvent() {
     <div>
       <Navbar />
       <div className='main-content'>
-        <div className='create-event-H'>
-          <h1 className='create-eventH1'>Create Event</h1>
-        </div>
+      <div className='create-event-main'>
         <div className='create-event-sidebar-and-form'>
           <div className='create-event-sidebar-div'>
             <div className="sidebar1">
@@ -129,10 +127,11 @@ function CreateEvent() {
               </div>
               {error && <p className="error-message">{error.message}</p>} {/* Display error message */}
             </form>
-            <div className='create-event-form-buttonDiv'>
+            {/* <div className='create-event-form-buttonDiv'>
               <Link to='/newEvent' className='create-event-back-button'>Back</Link>
-            </div>
+            </div> */}
           </div>
+        </div>
         </div>
       </div>
     </div>

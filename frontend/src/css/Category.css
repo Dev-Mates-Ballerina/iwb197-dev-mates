@@ -62,6 +62,11 @@
 .category-selection-rightside{
     margin-top: 4rem;
 }
+.category-selection-rightside-headerH2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
 .category-selection-rightside-body-descriptionP1{
     font-weight: bold;
 }
