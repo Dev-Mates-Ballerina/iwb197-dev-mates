@@ -1,6 +1,4 @@
-Here’s your event planning application README formatted for GitHub:
 
-markdown
 # PlanItNow
 
 Welcome to **PlanItNow**, a web application designed for both event organizers and service providers. This platform simplifies the event planning process by providing a user-friendly interface for managing events and resources effectively.
