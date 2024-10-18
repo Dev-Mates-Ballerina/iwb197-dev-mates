@@ -1,0 +1,168 @@
+.basicP-info{
+    margin-top: 2rem;
+}
+.profileH3{
+    border-bottom: 1px solid black;
+}
+.account-settings-page{
+    width: 1000vh;
+}
+.basicP-info h2{
+    margin-bottom: 1.5rem;
+    color: #2948ff;
+    font-size: 30px;
+    text-align: center;
+}
+.accountS-upload-button{
+    background-color: #0b15a5;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 4rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.profile-settings-upper{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 1080px;
+    margin-left: 14rem;
+}
+.profile-settings-upper-div{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 1rem;
+}
+.accountS-username{
+    margin-top: 10px;
+    width: 450px;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+}
+.accountS-description-textarea{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+    width: 450px;
+    margin-top: 10px;
+}
+.profile-settings-description{
+    margin-top: 20px;
+}
+.accountS-saveChanges-button{
+    margin-top: 1rem;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+.security-settings-lower-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.AccountS-other-settings{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 1080px;
+    margin-left: 14rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.accountS-otherS{
+    margin-left: 0.5rem;
+    border-right: 1px solid black;
+}
+.security-settings-lower{
+    margin-left: 3rem;
+}
+.accountS-email{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+    width: 450px;
+    margin-top: 10px;
+}
+.accountS-phone{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+    width: 450px;
+    margin-top: 10px;
+}
+.accountS-title{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+    width: 450px;
+    margin-top: 10px;
+}
+.security-settings-phone{
+    margin-top: 1rem;
+}
+.security-settings-email{
+    margin-top: 1rem;
+}
+.security-settings-title{
+    margin-top: 1rem;
+}
+.otheraccountS-saveChanges-button{
+    margin-top: 2rem;
+}
+.accountS-old-password{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+    width: 450px;
+    margin-top: 10px;
+}
+.accountS-password{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+    width: 450px;
+    margin-top: 10px;
+}
+.accountS-confirm-password{
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 20px;
+    width: 450px;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+}
+.security-settings-password-change{
+    margin-top: 1rem;
+}
+.security-settings-password{
+    margin-top: 1rem;
+}
+.security-settings-password-confirm{
+    margin-top: 1rem;
+}
+.securityS-saveChanges-button{
+    margin-top: 1rem;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 15px; 
+}
+.otheraccountS-saveChanges-button{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+.profile-settings-image-icon{
+    width: 100px;
+    height: 100px;
+}
+.profile-settings-image-image{
+    width: 200px;
+    height: 150px;
+}
+.profile-settings-username{
+    margin-top: 0.5rem;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../images/logo.png';
-import '../css/Navbar.css';
+import '../css/SPNavbar.css';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -14,30 +14,25 @@ function Navbar() {
                 </li>
             </Link>
             
-            <li><Link to="/">
+            <li><Link to="/serviceProviderDashboard">
             <i class="fas fa-home"></i>
-            <span class="nav-item">Home</span>
+            <span class="nav-item">Dashboard</span>
             </Link></li>
 
-            <li><Link to='/newEvent'>
+            <li><Link to='/bookings'>
                 <i class="fas fa-tasks"></i>
-                <span class="nav-item">New Event</span>
+                <span class="nav-item">Bookings</span>
                 </Link>
             </li>
             
-            <li><Link to='/analytics'>
-            <i class="fas fa-chart-bar"></i>
-            <span class="nav-item">Analytics</span>
-            </Link></li>
-
-            <li><Link to='/help'>
-            <i class="fas fa-question-circle"></i>
-            <span class="nav-item">Help</span>
-            </Link></li>
-
-            <li><Link to='/account'>
+            <li><Link to='/accounts'>
             <i class="fas fa-user"></i>
-            <span class="nav-item">Account</span>
+            <span class="nav-item">Accounts</span>
+            </Link></li>
+
+            <li><Link to='/serviceProvider'>
+            <i class="fas fa-user"></i>
+            <span class="nav-item">Register</span>
             </Link></li>
 
             <li><a href="" class="logout">

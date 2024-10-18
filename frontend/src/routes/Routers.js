@@ -15,6 +15,13 @@ import Catering from '../pages/ResourcePersons/Catering';
 import Electronics from '../pages/ResourcePersons/Electronics';
 import Vehicles from '../pages/ResourcePersons/Vehicles';
 import Decorations from '../pages/ResourcePersons/Decorations';
+import Analytics from '../pages/Analytics/Analytics';
+import Help from '../pages/Help/Help';
+import ServiceProviderDashboard from '../serviceProvider/ServiceProviderDashboard/ServiceProviderDashboard';
+import Bookings from '../serviceProvider/Bookings/Bookings';
+import ServiceProvider from '../serviceProvider/ServiceProvider/ServiceProvider';
+import Account from '../pages/Account/Account';
+import Accounts from '../serviceProvider/Accounts/Accounts';
 
 function Routers() {
   return (
@@ -36,6 +43,13 @@ function Routers() {
         <Route exact path="/newEvent/ResourcePerson/Electronics" element={<Electronics />} />
         <Route exact path="/newEvent/ResourcePerson/Vehicles" element={<Vehicles />} />
         <Route exact path="/newEvent/ResourcePerson/Decorations" element={<Decorations />} />
+        <Route exact path="/analytics" element={<Analytics />} />
+        <Route exact path="/help" element={<Help />} />
+        <Route exact path="/serviceProviderDashboard" element={<ServiceProviderDashboard />} />
+        <Route exact path="/bookings" element={<Bookings />} />
+        <Route exact path="/serviceProvider" element={<ServiceProvider />} />
+        <Route exact path="/account" element={<Account />} />
+        <Route exact path="/accounts" element={<Accounts />} />
       </Routes>
     </BrowserRouter>
   );

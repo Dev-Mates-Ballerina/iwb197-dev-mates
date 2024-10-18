@@ -1,0 +1,146 @@
+.main-content{
+    width: 80%;
+    margin-left: 20rem;
+}
+
+.bookings-page{
+    margin-top: 30px;
+    width: 169vh;
+
+}
+.bookings-page h2{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    color: #2948ff;
+}
+.booking-page-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 7rem;
+    margin-top: 2rem;
+}
+
+.active-bookings i{
+    font-size: 30px;
+    margin-top: 42px;
+    margin-left: 1.5rem;
+    color: green;
+    font-weight: bold;
+}
+.pending-bookings i{
+    font-size: 30px;
+    margin-top: 42px;
+    margin-left: 1.5rem;
+    color: orange;
+    font-weight: bold;
+}
+.cansel-bookings i{
+    font-size: 30px;
+    margin-top: 42px;
+    margin-left: 1.5rem;
+    color: red;
+    font-weight: bold;
+}
+.fullfilled-bookings i{
+    font-size: 30px;
+    margin-top: 42px;
+    margin-left: 1.5rem;
+    color: blue;
+    font-weight: bold;
+}
+.active-bookings{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: lightblue;
+    width: 250px;
+    height: 120px;
+    border-radius: 15px;
+
+}
+.booking-page-cards :hover{
+    background: lightcyan;
+} 
+
+.pending-bookings{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: lightblue;
+    width: 250px;
+    height: 120px;
+    border-radius: 15px;
+}
+.cansel-bookings{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color:lightblue;
+    width: 250px;
+    height: 120px;
+    border-radius: 15px;
+}
+.fullfilled-bookings{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: lightblue;
+    width: 250px;
+    height: 120px;
+    border-radius: 15px;
+}
+.ordersP{
+    font-size: small;
+    margin-top: 1.2rem;
+    margin-left: 1.3rem;
+}
+.ordersH6{
+    font-size: 30px;
+    margin-left: 1.3rem;
+    margin-bottom: 20px;
+}
+.recent-bookings-h4{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 3rem;
+}
+.recent-booking-table{
+    
+    text-align: center;
+    height:340px;
+    
+}
+table{
+  width: 93%;
+  border-collapse: collapse;
+  overflow-y: scroll;
+}
+th{
+  background-color: lightslategray;
+  padding: 1rem;
+}
+td{
+  font-size: small;
+  padding: 1rem;
+}
+tr:nth-child(even){
+  background-color: lightblue;
+}
+
+.table tr th, .table tr td{
+  padding: 10px;
+  text-align: center;
+}
+.pButton{
+    height: 30px;
+    background-color: green;
+    border-radius: 15px;
+    width: 100px;
+    cursor: pointer;
+}
+.upButton{
+    height: 30px;
+    background-color: orange;
+    border-radius: 15px;
+    width: 100px;
+    cursor: pointer;
+}

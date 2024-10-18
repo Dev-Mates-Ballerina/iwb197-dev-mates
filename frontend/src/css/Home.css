@@ -1,5 +1,5 @@
 .main-content{
-    width: 70%;
+    width: 80%;
     margin-left: 20rem;
 }
 
@@ -30,11 +30,21 @@
     color: black;
   }
 
-  .btn-primary{
+  .btn-primary1{
+    background-color: transparent;
+    color: blue;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 2rem;
+  }
+  .btn-primary1:hover{
     background-color: #2948ff;
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -45,35 +55,24 @@
     display: flex;
     justify-content: center;
   }
-  .btn-primary:hover{
-    background-color: #2035ac;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 2rem;
-    
-  }
   /* Services Section */
-  .services {
+  .services12 {
     padding: 50px 0;
     text-align: center;
   }
   
-  .services h2 {
+  .services12 h2 {
     font-size: 1.5rem;
     margin-bottom: 30px;
   }
   
-  .service-cards {
+  .service-cards1 {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
   }
   
-  .card-home {
+  .card1 {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 10px;
@@ -81,21 +80,50 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .card-home img {
+  .card1 img {
     max-width: 100%;
     border-radius: 10px;
   }
   
-  .card-home h3 {
+  .card1 h3 {
     margin-top: 15px;
-    font-size: 0.8rem;
+    font-size: 1.4rem;
   }
   
-  .card-home p {
+  .card1 p {
     margin-top: 10px;
   }
 
+.recent h3{
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  margin-left: 1.5rem;
+}
 
+table {
+
+  border-collapse: collapse;
+  margin: 20px 0;
+  margin-left: 3.3rem;
+  font-size: 1.1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+th {
+  background-color: #aeb9fa;
+  color: #333333;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+  
   .screen {
     position: relative;
     background: #ffffff;
@@ -182,7 +210,8 @@
     flex-direction: column;
     position: relative;
     color: #2948ff;
-    font-size: 26px;
+    font-size: 30px;
+    font-weight: bold;
   }
   
   .app-title:after {
@@ -207,10 +236,11 @@
   }
   
   .app-form-group.message {
-    margin-top: 40px;
+    margin-top: 20px;
   }
   
   .app-form-group.buttons {
+    margin-top: 1.5rem;
     margin-bottom: 0;
     text-align: right;
   }
@@ -221,7 +251,7 @@
     background: none;
     border: none;
     border-bottom: 1px solid #666;
-    color: #ddd;
+    color: #000000;
     font-size: 14px;
     text-transform: uppercase;
     outline: none;
@@ -229,11 +259,12 @@
   }
   
   .app-form-control::placeholder {
-    color: #666;
+    color: #a0a0a0;
+    font-size: smaller;
   }
   
   .app-form-control:focus {
-    border-bottom-color: #ddd;
+    border-bottom-color: #838383;
   }
   
   .app-form-button {
