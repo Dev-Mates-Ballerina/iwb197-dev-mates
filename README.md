@@ -75,7 +75,7 @@ To run the application locally, follow these steps:
 
 1. Clone the repository:
    bash
-   git clone https://github.com/yourusername/PlanItNow.git
+   git clone https://github.com/Dev-Mates-Ballerina/iwb197-dev-mates.git
    cd PlanItNow
    
 
