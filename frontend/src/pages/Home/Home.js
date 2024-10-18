@@ -2,6 +2,9 @@ import React from 'react'
 import Navbar from '../../components/Navbar'
 import '../../css/Home.css'
 import Footer from '../../components/Footer';
+import wedding from '../../images/wedding.png'
+import cooperate from '../../images/cooperate.png'
+import party from '../../images/party.png'
 
 function Home() {
   return (
@@ -25,18 +28,18 @@ function Home() {
             <section class="services">
                 <div class="container">
                 <div class="service-cards">
-                    <div class="card">
-                    <img src={''} alt="Wedding Planning"/>
+                    <div class="card-home">
+                    <img src={wedding} alt="Wedding Planning"/>
                     <h3>Wedding Planning</h3>
                     <p>We help you create your dream wedding with attention to every detail.</p>
                     </div>
-                    <div class="card">
-                    <img src={''} alt="Corporate Events"/>
+                    <div class="card-home">
+                    <img src={cooperate} alt="Corporate Events"/>
                     <h3>Corporate Events</h3>
                     <p>Professional event planning for meetings, conferences, and more.</p>
                     </div>
-                    <div class="card">
-                    <img src={''} alt="Parties"/>
+                    <div class="card-home">
+                    <img src={party} alt="Parties"/>
                     <h3>Private Parties</h3>
                     <p>From birthdays to anniversaries, we make every celebration special.</p>
                     </div>

@@ -1,11 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Navbar from '../../components/Navbar'
 import { Link } from 'react-router-dom'
 import '../../css/Locations.css'
 import { DataContext } from '../../context/DataProvider';
 
 function Locations() {
-    const { addCard } = useContext(DataContext);
+    const { addCard, selectedCards } = useContext(DataContext); // Get selectedCards from context
+    const [clickedButtons, setClickedButtons] = useState([]); // State
 
   const CardsData = [
     {
@@ -34,10 +35,12 @@ function Locations() {
     }
     
   ];
-    const handleSubmit = (card) => {
-        addCard(card);
-    };
+  const handleSubmit = (card) => {
+    addCard(card);
+    setClickedButtons([...clickedButtons, card.name]); // Add the selected card's name to clickedButtons
+};
 
+const isCardSelected = (cardName) => clickedButtons.includes(cardName) || selectedCards.some(card => card.name === cardName); // Check if the card is already selected
   return (
     <div>
       <Navbar/>
@@ -56,10 +59,7 @@ function Locations() {
           <div className="content">
             <div className="budget-header">
               <h2>Step 3</h2>
-              <div className="budget">
-                <img src={''} alt="" width='50px' />
-                <h3>LKR 50 000</h3>
-              </div>
+             
             </div>
             
             <p className="description">Select the Location you want</p>
@@ -79,13 +79,20 @@ function Locations() {
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star-half-alt"></i>
                     <span className="rating-count">{card.rating} ({card.reviews})</span>
-                    <button className="save-button-locations"  onClick={() => handleSubmit(card)}>Choose</button>
+                    <button
+                className={`save-button ${isCardSelected(card.name) ? 'green' : ''}`} // Add 'green' class if selected
+                onClick={() => handleSubmit(card)}
+                disabled={isCardSelected(card.name)} // Disable the button if selected
+            >
+                {isCardSelected(card.name) ? 'Selected' : 'Choose'}
+            </button>
                   </div>
                 ))}
               </div>
             </div>
             
-            <button className="back-button">Back</button>
+            <button className="entertainment-back-button">Back</button>
+
           </div>
         </div>
       </div>

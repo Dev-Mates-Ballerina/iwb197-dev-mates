@@ -73,7 +73,7 @@
     margin-top: 20px;
   }
   
-  .card {
+  .card-home {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 10px;
@@ -81,17 +81,17 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .card img {
+  .card-home img {
     max-width: 100%;
     border-radius: 10px;
   }
   
-  .card h3 {
+  .card-home h3 {
     margin-top: 15px;
     font-size: 0.8rem;
   }
   
-  .card p {
+  .card-home p {
     margin-top: 10px;
   }
 

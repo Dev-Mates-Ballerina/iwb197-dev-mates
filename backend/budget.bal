@@ -11,7 +11,7 @@ import ballerina/http;
         maxAge: 3600 // Optional
     }
 }
-service /register on new http:Listener(8082) {
+service /budget on new http:Listener(8083) {
 
     @http:ResourceConfig {
         cors: {
@@ -21,13 +21,10 @@ service /register on new http:Listener(8082) {
     }
 
     // POST: Add new employee
-    resource function post .(@http:Payload User user) returns int|error? {
-        return register(user);
+    resource function post .(@http:Payload Budget budget) returns int|error? {
+        return saveBudget(budget);
     }
     // GET: Fetch all employees
-    resource function get .() returns User[]|error? {
-        return getAllUsers();
-    }
 
   
     

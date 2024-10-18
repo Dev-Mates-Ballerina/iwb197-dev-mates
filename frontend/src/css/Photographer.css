@@ -24,7 +24,6 @@
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-    border: 2px solid white;
 }
 
 .card-details-photographer {
@@ -76,4 +75,9 @@
 
 .save-button:hover {
     background-color: rgb(18, 170, 99);
+}
+.save-button.green {
+    background-color: green;
+    color: white;
+    cursor: not-allowed;
 }

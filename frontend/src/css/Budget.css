@@ -9,10 +9,12 @@
     margin: 2rem 0;
     margin-left: 2rem;
 }
-
+.cart-section img{
+    border-radius: 10px;
+}
 .card-budget{
     display: grid;
-    grid-template-columns: 60% 20% 15%;
+    grid-template-columns: 8% 50% 20% 15%;
     width: 100%;
     background-color: #2949ffcb;	
     gap: 1rem;
@@ -22,6 +24,7 @@
     padding: 0.4rem;
     align-items: center;
     justify-content: end;
+    padding: 1rem 0;
 }
 
 .card-budget-delete button{
@@ -33,4 +36,58 @@
     cursor: pointer;
     font-size: 16px;
     margin: 0.5rem 0;
+}
+
+.card-budget-title p{
+    font-size: 12px;
+}
+
+
+.budget-budget-header{
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.budget-list-title{
+    text-align: center;
+    color: #2949ff;
+    font-size: 22px;
+    border-bottom: 1px solid #2949ff;
+    padding-bottom: 1rem;
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+
+.budget-total{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    justify-content: end;
+    align-items: center;
+    margin: 2rem 0;
+    background-color: #1b3ba1;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.budget-total button{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1rem 0;
+    color: #040b6b;
+    font-weight: 500;
+}
+
+.budget-total button:hover{
+    background-color: #2ae0c2;
+    border-radius: 10px;
+    padding: 1rem 0;
+    color: #000000;
+    font-weight: 500;
+    cursor: pointer;
 }

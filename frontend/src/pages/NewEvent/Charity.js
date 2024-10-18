@@ -26,10 +26,7 @@ function Charity() {
               <div className='charity-selection-rightsideH'>
                 <h2 className='charity-selection-rightsideH2'>Step 4</h2>
               </div>
-              <div className="charity-selection-budget">
-                <img src={dollar} alt="" width='50px'/>
-                <h3>LKR 10,000</h3>
-              </div>
+             
             </div>
             <div className='charity-selection-rightsideP'>
               <p className='charity-selection-rightsideP1'>Are you interested in charity?</p>
@@ -52,7 +49,7 @@ function Charity() {
                 <input className="charity-selection-totalAmount"type='text' placeholder='Total Amount Raised So far'/><br/>
                 <p className='charity-selection-more'>For more details....</p>
                 <button className='charity-selection-rightside-body-saveB'>Save</button><br/>
-                <button className='charity-selection-rightside-body-skipB'>Skip</button>
+                <Link to='/newEvent/Budget'><button className='charity-selection-rightside-body-skipB'>Skip</button></Link>
               </div>
             </div>
           </div>

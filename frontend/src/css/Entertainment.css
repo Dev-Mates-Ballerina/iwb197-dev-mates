@@ -1,59 +1,7 @@
 .main-content-entertainment{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-}
-.sidebar1{
-    width: 5%;
-    padding: 20px;
-    justify-content: space-between;
-    margin-top: 3rem;
-}
-
-.steps {
-    list-style-type: none;
-}
-
-.step {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ccc;
-    color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 4rem 0;
-}
-.step a{
-    color: white;
-    text-align: center;
-}
-.step a:hover{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #0b15a5;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 4rem 0;
 }
 
-.step.complete {
-    background-color: rgba(42, 218, 150, 0.493);
-    color: black;
-}
-
-.step.current {
-    background-color: blue;
-}
 .entertainment-page-rightSide{
     margin-top: 3rem;
     margin-left: 3rem;
@@ -72,6 +20,7 @@
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
 }
 .dance1{
     display: grid;
@@ -136,6 +85,7 @@
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
 }
 .DJ1{
     display: grid;

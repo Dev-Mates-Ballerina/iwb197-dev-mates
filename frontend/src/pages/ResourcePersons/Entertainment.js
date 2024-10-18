@@ -1,7 +1,7 @@
-import React from 'react'
-import Navbar from '../../components/Navbar'
-import { Link } from'react-router-dom'
-import '../../css/Entertainment.css'
+import React, { useContext, useState } from 'react';
+import Navbar from '../../components/Navbar';
+import { Link } from 'react-router-dom';
+import '../../css/Entertainment.css';
 import dan1 from '../../images/dan1.jpeg';
 import dan2 from '../../images/dan2.jpeg';
 import dan3 from '../../images/dan3.jpeg';
@@ -9,125 +9,152 @@ import dj1 from '../../images/dj1.jpeg';
 import dj2 from '../../images/dj2.jpeg';
 import dj3 from '../../images/dj3.jpeg';
 import dollar from '../../images/dollar.png';
+import { DataContext } from '../../context/DataProvider';
 
 function Entertainment() {
+  const { addCard, selectedCards } = useContext(DataContext); // Get selectedCards from context
+  const [clickedButtons, setClickedButtons] = useState([]); // State
+
+  const cardsData = {
+    danceTeams: [
+      {
+        name: "CV Crew",
+        email: "cvcrew@gmail.com",
+        phone: "0711234567",
+        price: 10000,
+        imgSrc: dan1
+      },
+      {
+        name: "BMK Dancers",
+        email: "bmkdancers@gmail.com",
+        phone: "0711234567",
+        price: 15000,
+        imgSrc: dan2
+      },
+      {
+        name: "Shadow Girls",
+        email: "shadow@gmail.com",
+        phone: "0711234567",
+        price: 20000,
+        imgSrc: dan3
+      }
+    ],
+    djTeams: [
+      {
+        name: "DJ M",
+        email: "djm@gmail.com",
+        phone: "0711234567",
+        price: 15000,
+        imgSrc: dj1
+      },
+      {
+        name: "DJ Song",
+        email: "djsong@gmail.com",
+        phone: "0711234567",
+        price: 20000,
+        imgSrc: dj2
+      },
+      {
+        name: "DJ Mix",
+        email: "djmix@gmail.com",
+        phone: "0711234567",
+        price: 30000,
+        imgSrc: dj3
+      }
+    ]
+  };
+
+  const handleSubmit = (card) => {
+    addCard(card);
+    setClickedButtons([...clickedButtons, card.name]); // Add the selected card's name to clickedButtons
+};
+
+const isCardSelected = (cardName) => clickedButtons.includes(cardName) || selectedCards.some(card => card.name === cardName); // Check if the card is already selected
+
   return (
     <div>
       <Navbar/>
-      <div class="main-content">
+      <div className="main-content">
         <div className='main-content-entertainment'>
           <div className='main-content-entertainment-sidebar'>
-            <div class="sidebar1">
-                <ol class="steps">
-                  <li class="step"><Link to='/newEvent'>1</Link></li>
-                  <li class="step"><Link to='/newEvent/Category'>2</Link></li>
-                  <li class="step current"><Link to='/newEvent/ResourcePerson'>3</Link></li>
-                  <li class="step"><Link to='/newEvent/Charity'>4</Link></li>
-                  <li class="step"><Link to='/newEvent/Budget'>5</Link></li>
-                </ol>
+            <div className="sidebar1">
+              <ol className="steps">
+                <li className="step"><Link to='/newEvent'>1</Link></li>
+                <li className="step"><Link to='/newEvent/Category'>2</Link></li>
+                <li className="step current"><Link to='/newEvent/ResourcePerson'>3</Link></li>
+                <li className="step"><Link to='/newEvent/Charity'>4</Link></li>
+                <li className="step"><Link to='/newEvent/Budget'>5</Link></li>
+              </ol>
             </div>
           </div>
-          <div class="entertainment-page-rightSide">
-              <div className='entertainment-page-rightSide-header'>
-                <h2 className='entertainment-page-rightSideH2'>Step 3</h2>
-                <div className="entertainment-budget">
-                  <img src={dollar} alt="" width='50px'/>
-                  <h3>LKR 50 000</h3>
+          <div className="entertainment-page-rightSide">
+            <div className='entertainment-page-rightSide-header'>
+              <h2 className='entertainment-page-rightSideH2'>Step 3</h2>
+        
+            </div>
+            <p className="entertainment-page-rightSideP1">Select the Entertainment Category you want</p>
+            <p className="entertainment-page-rightSideP2">Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
+
+            <div className="entertainmentCategory">
+              <div className="dance">
+                <h4 className='danceH4'>Select the Dancing team you want</h4>
+                <div className="dancingTeams">
+                  {cardsData.danceTeams.map((card, index) => (
+                    <div className="dance1" key={index}>
+                      <div>
+                        <img src={card.imgSrc} alt={card.name} />
+                      </div>
+                      <div className='dance1-para'>
+                        <h3>{card.name}</h3>
+                        <p>{card.email}</p>
+                        <p>{card.phone}</p>
+                        <p>LKR {card.price}</p>
+                      </div>
+                      <button
+                            className={`save-button ${isCardSelected(card.name) ? 'green' : ''}`} // Add 'green' class if selected
+                            onClick={() => handleSubmit(card)}
+                            disabled={isCardSelected(card.name)} // Disable the button if selected
+                        >
+                            {isCardSelected(card.name) ? 'Selected' : 'Choose'}
+                        </button>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <p class="entertainment-page-rightSideP1">Select the Entertainment Category you want</p>
-              <p class="entertainment-page-rightSideP2">Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
-              <div class="entertainmentCategory">
-          <div class="dance">
-            <h4 className='danceH4'>Select the Dancing team you want</h4>
-            <div class="dancingTeams">
-              <div class="dance1">
-                <div>
-                  <img src={dan1} />
+
+              <div className="DJ">
+                <h4 className="djTeamsBH4">Select the DJ team you want</h4>
+                <div className="DJteams">
+                  {cardsData.djTeams.map((card, index) => (
+                    <div className="DJ1" key={index}>
+                      <div>
+                        <img src={card.imgSrc} alt={card.name} />
+                      </div>
+                      <div className='card-details-vehicle'>
+                        <h3>{card.name}</h3>
+                        <p>{card.email}</p>
+                        <p>{card.phone}</p>
+                        <p>LKR {card.price}</p>
+                      </div>
+                      <button
+                          className={`save-button ${isCardSelected(card.name) ? 'green' : ''}`} // Add 'green' class if selected
+                          onClick={() => handleSubmit(card)}
+                          disabled={isCardSelected(card.name)} // Disable the button if selected
+                      >
+                          {isCardSelected(card.name) ? 'Selected' : 'Choose'}
+                      </button>
+                    </div>
+                  ))}
                 </div>
-                <div className='dance1-para'>
-                  <p1>CV Crew</p1>
-                  <p>cvcrew@gmail.com</p>
-                  <p>0711234567</p>
-                  <p>LKR 10 000</p>
-                </div>
-                <button class="dancingTeams-choose">Choose</button>
-              </div>
-              <div class="dance2">
-                <div>
-                  <img src={dan2} />
-                </div>
-                <div className='dance2-para'>
-                  <p1>BMK Dancers</p1>
-                  <p>bmkdancers@gmail.com</p>
-                  <p>0711234567</p>
-                  <p>LKR 15 000</p>
-                </div> 
-                <button class="dancingTeams-choose">Choose</button> 
-              </div>
-              <div class="dance3">
-                <div>
-                  <img src={dan3} />
-                </div>
-                <div className='dance3-para'>
-                  <p1>Shadow Girls</p1>
-                  <p>shadow@gmail.com</p>
-                  <p>0711234567</p>
-                  <p>LKR 20 000</p>
-                </div>  
-                <button class="dancingTeams-choose">Choose</button>
               </div>
             </div>
-          </div> 
-          <div class="DJ">
-            <h4 class="djTeamsBH4">Select the DJ team you want</h4>
-            <div class="DJteams">
-              <div class="DJ1">
-                <div>
-                  <img src={dj1} />
-                </div>
-                <div>
-                  <p1>DJ M</p1>
-                  <p>djm@gmail.com</p>
-                  <p>0711234567</p>
-                  <p>LKR 15 000</p>
-                </div>
-                <button class="djTeams-choose">Choose</button>
-              </div>
-              <div class="DJ2">
-                <div>
-                  <img src={dj2} />
-                </div>
-                <div>
-                  <p1>DJ Song</p1>
-                  <p>djsong@gmail.com</p>
-                  <p>0711234567</p>
-                  <p>LKR 20 000</p>
-                </div> 
-                <button class="djTeams-choose">Choose</button> 
-              </div>
-              <div class="DJ2">
-                <div>
-                  <img src={dj3} />
-                </div>
-                <div>
-                  <p1>DJ Mix</p1>
-                  <p>djmix@gmail.com</p>
-                  <p>0711234567</p>
-                  <p>LKR 30 000</p>
-                </div>  
-                <button class="djTeams-choose">Choose</button>
-              </div>
-            </div>
-          </div> 
+
+            <button className="entertainment-back-button">Back</button>
+          </div>
         </div>
-          <button class="entertainment-back-button">Back</button>
-          <button class="entertainment-save-button">Save</button>
       </div>
-      </div>
-      </div>
-      </div>
-  )
+    </div>
+  );
 }
 
-export default Entertainment
+export default Entertainment;

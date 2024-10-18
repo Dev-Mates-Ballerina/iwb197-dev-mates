@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Navbar from '../../components/Navbar';
 import dollar from '../../images/dollar.png'; // Add appropriate image paths
 import '../../css/Catering.css';
@@ -7,57 +7,60 @@ import { Link } from 'react-router-dom';
 import '../../css/Catering.css'
 
 function Catering() {
-    const { addCard } = useContext(DataContext);
+  const { addCard, selectedCards } = useContext(DataContext); // Get selectedCards from context
+  const [clickedButtons, setClickedButtons] = useState([]); // State
 
     const cardsData = [
         {
             name: "Mahesh Caters",
             description: "Discover unparalleled catering services at Warna Caterers, the #1 catering service in Colombo, Sri Lanka since 1999.",
             contact: "0711234567",
-            price: "20,000 LKR Onwards",
+            price: 20000,
             imgSrc: "/images/mahesh-caters.jpg" // Replace with actual image path
         },
         {
             name: "Bashitha Catering",
             description: "Dedicated towards culinary excellence to create memorable food experiences.",
             contact: "0711234567",
-            price: "40,000 LKR Onwards",
+            price: 40000,
             imgSrc: "/images/bashitha-catering.jpg" // Replace with actual image path
         },
         {
             name: "Kalana Caters",
             description: "Kalana caters is the exclusive airline caterer in Sri Lanka, a rapidly expanding hub for global travel.",
             contact: "0711234567",
-            price: "20,000 LKR Onwards",
+            price: 20000,
             imgSrc: "/images/kalana-caters.jpg" // Replace with actual image path
         },
         {
             name: "Sahan Caters",
             description: "Fusion Cuisine, North Indian, Chinese & BBQ. Best Caterers in Colombo. A perfect Banquet space for all occasions.",
             contact: "0711234567",
-            price: "30,000 LKR Onwards",
+            price: 30000,
             imgSrc: "/images/sahan-caters.jpg" // Replace with actual image path
         },
         {
             name: "Green Chef",
             description: "Our culinary team offers a variety of menus and can customize a menu to fulfil your outdoor catering needs.",
             contact: "0711234567",
-            price: "10,000 LKR Onwards",
+            price: 10000,
             imgSrc: "/images/green-chef.jpg" // Replace with actual image path
         },
         {
             name: "Eventless Catering",
             description: "We are pleased to extend our catering services for any event within Colombo: birthday parties, cocktails, weddings.",
             contact: "0711234567",
-            price: "15,000 LKR Onwards",
+            price: 15000,
             imgSrc: "/images/eventless-catering.jpg" // Replace with actual image path
         }
     ];
 
     const handleSubmit = (card) => {
-        addCard(card);
-    };
-
+      addCard(card);
+      setClickedButtons([...clickedButtons, card.name]); // Add the selected card's name to clickedButtons
+  };
+  
+  const isCardSelected = (cardName) => clickedButtons.includes(cardName) || selectedCards.some(card => card.name === cardName); // Check if the card is already selected
     return (
         <div>
             <Navbar />
@@ -76,10 +79,7 @@ function Catering() {
                     <div className="content">
                         <div className="budget-header">
                             <h2>Step 3</h2>
-                            <div className="budget">
-                                <img src={dollar} alt="Budget" width="50px" />
-                                <h3>LKR 50 000</h3>
-                            </div>
+                            
                         </div>
 
                         <p className="description">Select the Catering Service you want</p>
@@ -96,7 +96,13 @@ function Catering() {
                                         <p>{card.price}</p>
                                     </div>
                                     <div className="card-btn">
-                                        <button className="save-button" onClick={() => handleSubmit(card)}>Choose</button>
+                                    <button
+                                      className={`save-button ${isCardSelected(card.name) ? 'green' : ''}`} // Add 'green' class if selected
+                                      onClick={() => handleSubmit(card)}
+                                      disabled={isCardSelected(card.name)} // Disable the button if selected
+                                  >
+                                      {isCardSelected(card.name) ? 'Selected' : 'Choose'}
+                                  </button>
                                     </div>
                                 </div>
                             ))}

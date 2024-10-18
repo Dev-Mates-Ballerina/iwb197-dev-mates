@@ -31,10 +31,7 @@ function ResourcePerson() {
         <div class="content">
             <div className="budget-header">
               <h2 className='step3'>Step 3</h2>
-              <div className="budget">
-                <img src={dollar} alt="" width='50px'/>
-                <h3 className='price'>LKR 0</h3>
-              </div>
+        
             </div>
             <p class="description">Select the Supplier Category</p>
             <p className='description2'>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>

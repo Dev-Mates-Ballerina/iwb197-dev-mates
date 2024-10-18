@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Navbar from '../../components/Navbar'
 import '../../css/Decorations.css'
 import { Link } from'react-router-dom'
@@ -12,57 +12,59 @@ import dollar from '../../images/dollar.png'
 import { DataContext } from '../../context/DataProvider';
 
 function Decorations() {
-    const { addCard } = useContext(DataContext);
+  const { addCard, selectedCards } = useContext(DataContext); // Get selectedCards from context
+  const [clickedButtons, setClickedButtons] = useState([]); //
 
     const cardsData = [
         {
             name: "Elite Event Creators",
             contact: "+94 71 111 1111",
             email: "info@elitecreators.com",
-            price: "LKR 162,500",
+            price: 162500,
             imgSrc: deco1
         },
         {
             name: "Sparkle Celebrations",
             contact: "+94 71 111 1111",
             email: "contact@sparkle.com",
-            price: "LKR 146,250",
+            price: 146250,
             imgSrc: deco2
         },
         {
             name: "Dream Day Planners",
             contact: "+94 71 111 1111",
             email: "hello@dreamday.com",
-            price: "LKR 195,000",
+            price: 195000,
             imgSrc: deco3
         },
         {
             name: "Glamour Event Solutions",
             contact: "+94 71 111 1111",
             email: "support@glamourevents.com",
-            price: "LKR 178,750",
+            price: 178750,
             imgSrc: deco4
         },
         {
             name: "Festive Moments Co.",
             contact: "+94 71 111 1111",
             email: "inquiries@festive.com",
-            price: "LKR 130,000",
+            price: 130000,
             imgSrc: deco5
         },
         {
             name: "Perfect Planner",
             contact: "+94 71 111 1111",
             email: "info@perfectlyplanner.com",
-            price: "LKR 211,250",
+            price: 211250,
             imgSrc: deco6
         }
     ];
-
-    const handleSubmit = (decoration) => {
-        addCard(decoration);
-    };
-
+    const handleSubmit = (card) => {
+      addCard(card);
+      setClickedButtons([...clickedButtons, card.name]); // Add the selected card's name to clickedButtons
+  };
+  
+  const isCardSelected = (cardName) => clickedButtons.includes(cardName) || selectedCards.some(card => card.name === cardName); // Check if the card is already selected
   return (
     <div>
       <Navbar/>
@@ -80,10 +82,7 @@ function Decorations() {
           <div class="decoration-content">
             <div className="decoration-budget-header">
                 <h2>Step 3</h2>
-                <div className="decoration-budget">
-                  <img src={dollar} alt="" width='50px'/>
-                  <h3>LKR 50 000</h3>
-                </div>
+                
             </div>
             <p class="decoration-descriptionP1">Select the Decorations Category you want</p>
             <p className='decoration-descriptionP2'>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. <br></br>Please choose from the options so we can help you plan your events.</p>
@@ -103,7 +102,13 @@ function Decorations() {
                             <p>{decoration.email}</p>
                             <p>{decoration.price}</p>
                         </div>
-                        <button className="decoration-choose" onClick={() => handleSubmit(decoration)}>Choose</button>
+                        <button
+                                        className={`save-button ${isCardSelected(decoration.name) ? 'green' : ''}`} // Add 'green' class if selected
+                                        onClick={() => handleSubmit(decoration)}
+                                        disabled={isCardSelected(decoration.name)} // Disable the button if selected
+                                    >
+                                        {isCardSelected(decoration.name) ? 'Selected' : 'Choose'}
+                                    </button>
                     </div>
                 ))}
 

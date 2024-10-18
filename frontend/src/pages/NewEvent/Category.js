@@ -29,15 +29,12 @@ function Category() {
               </ol>
             </div>
           </div>
-          <div className='category-selection-rightside'>
+          <div className='content'>
             <div className='category-selection-rightside-header'>
               <div>
                 <h2 className='category-selection-rightside-headerH2'>Step 2</h2>
               </div>
-              <div className="budget">
-                <img src={dollar} alt="" width='50px'/>
-                <h3>LKR 0</h3>
-              </div>
+         
             </div>
             <div className='category-selection-rightside-body'>
             <div>

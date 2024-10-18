@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Navbar from '../../components/Navbar'
 import vehi1 from '../../images/vehi1.jpeg';
 import vehi2 from '../../images/vehi2.jpeg';
@@ -14,10 +14,10 @@ import { DataContext } from '../../context/DataProvider';
 
 function Vehicles() {
 
-    const { addCard } = useContext(DataContext);
+    const { addCard, selectedCards } = useContext(DataContext); // Get selectedCards from context
+    const [clickedButtons, setClickedButtons] = useState([]); // State to t
 
-
-    const vehicleData = [
+    const cardsData = [
         {
           name: "Mahesh Cab Services",
           email: "mahesh@gmail.com",
@@ -64,8 +64,10 @@ function Vehicles() {
 
       const handleSubmit = (card) => {
         addCard(card);
+        setClickedButtons([...clickedButtons, card.name]); // Add the selected card's name to clickedButtons
     };
 
+    const isCardSelected = (cardName) => clickedButtons.includes(cardName) || selectedCards.some(card => card.name === cardName); // Check if the card is already selected
   return (
     <div>
       <Navbar/>
@@ -83,90 +85,39 @@ function Vehicles() {
             <div class="vehicles-content">
             <div className="vehicles-budget-header">
               <h2>Step 3</h2>
-              <div className="vehicles-budget">
-                <img src={dollar} alt="" width='50px'/>
-                <h3>LKR 50 000</h3>
-              </div>
+              
             </div>
               <p class="vehicles-p1">Select the Vehicle Service you want</p>
               <p className='vehicles-p2'>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
             <div class="vehicleServices">
               <div class="vehicle">
                   
-                  <div class="vehicle1">
-                  {vehicleData.map((vehicle, index) => (
-                <div className="card-vehicle" key={index}>
+                  {cardsData.map((card, index) => (
+                <div className="vehicle1" key={index}>
                   <div className="card-img">
-                    <img src={vehicle.imgSrc} alt={vehicle.name} className="card-img" />
+                    <img src={card.imgSrc} alt={card.name} className="card-img" />
                   </div>
                   <div className="card-details-vehicle">
-                    <h3>{vehicle.name}</h3>
-                    <p>{vehicle.email}</p>
-                    <p>{vehicle.phone}</p>
-                    <p>LKR {vehicle.price}</p>
+                    <h3>{card.name}</h3>
+                    <p>{card.email}</p>
+                    <p>{card.phone}</p>
+                    <p>LKR {card.price}</p>
                   </div>
-                  <div className="card-btn">
-                    <button className="save-button" onClick={() => handleSubmit(vehicle)}>Choose</button>
+                  <div className="card-btn-vehicle">
+                  <button
+                    className={`save-button ${isCardSelected(card.name) ? 'green' : ''}`} // Add 'green' class if selected
+                    onClick={() => handleSubmit(card)}
+                    disabled={isCardSelected(card.name)} // Disable the button if selected
+                >
+                    {isCardSelected(card.name) ? 'Selected' : 'Choose'}
+                </button>
                   </div>
                 </div>
               ))}
-                  </div>
-                  <div class="vehicle3">
-                    <div>
-                      <img src={vehi3} />
-                    </div>
-                    <div className='vehicle-para'>
-                      <p1>Kalana Cabs</p1>
-                      <p>kalana@gmail.com</p>
-                      <p>0711234567</p>
-                      <p>LKR 5 000</p>
-                    </div>  
-                    <button class="vehicle-choose">Choose</button>
-                  </div>
+
                 </div>
             </div> 
-              <div class="vehicleRow2">
-                <div class="vehicle4">
-                  <div>
-                    <img src={vehi4} />
-                  </div>
-                  <div className='vehicle-para'>
-                    <p1>Sahan Vehicle House</p1>
-                    <p>sahan@gmail.com</p>
-                    <p>0711234567</p>
-                    <p>LKR 9 000</p>
-                  </div>
-                  <button class="vehicle-choose">Choose</button>
-                </div>
-                <div class="vehicle5">
-                  <div>
-                    <img src={vehi5} />
-                  </div>
-                  <div className='vehicle-para'>
-                    <p1>Green Cabs House</p1>
-                    <p>green@gmail.com</p>
-                    <p>0711234567</p>
-                    <p>LKR 8 000</p>
-                  </div>
-                  <button class="vehicle-choose">Choose</button>  
-                </div>
-                <div class="vehicle6">
-                  <div>
-                    <img src={vehi6} />
-                  </div>
-                  <div className='vehicle-para'>
-                    <p1>Eventless Rent A car</p1>
-                    <p>eventless@gmail.com</p>
-                    <p>0711234567</p>
-                    <p>LKR 11 000</p>
-                  </div>    
-                  <button class="vehicle-choose">Choose</button>
-                </div>
-                <div>
-                  <button class="vehicle-back-button">Back</button>
-                  <button class="vehicle-save-button">Save</button>
-                </div>
-              </div> 
+
           </div>
           </div>
           </div>
