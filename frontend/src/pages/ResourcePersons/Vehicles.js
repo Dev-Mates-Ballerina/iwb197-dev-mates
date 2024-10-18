@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from '../../components/Navbar'
 import vehi1 from '../../images/vehi1.jpeg';
 import vehi2 from '../../images/vehi2.jpeg';
@@ -9,8 +9,63 @@ import vehi6 from '../../images/vehi6.jpeg';
 import dollar from '../../images/dollar.png'
 import { Link } from'react-router-dom'
 import '../../css/Vehicles.css'
+import { DataContext } from '../../context/DataProvider';
+
 
 function Vehicles() {
+
+    const { addCard } = useContext(DataContext);
+
+
+    const vehicleData = [
+        {
+          name: "Mahesh Cab Services",
+          email: "mahesh@gmail.com",
+          phone: "0711234567",
+          price: 12000,
+          imgSrc: vehi1
+        },
+        {
+          name: "Bashitha Rent A Car",
+          email: "bashitha@gmail.com",
+          phone: "0711234567",
+          price: 10000,
+          imgSrc: vehi2
+        },
+        {
+          name: "Kalana Cabs",
+          email: "kalana@gmail.com",
+          phone: "0711234567",
+          price: 5000,
+          imgSrc: vehi3
+        },
+        {
+          name: "Sahan Vehicle House",
+          email: "sahan@gmail.com",
+          phone: "0711234567",
+          price: 9000,
+          imgSrc: vehi4
+        },
+        {
+          name: "Green Cabs House",
+          email: "green@gmail.com",
+          phone: "0711234567",
+          price: 8000,
+          imgSrc: vehi5
+        },
+        {
+          name: "Eventless Rent A Car",
+          email: "eventless@gmail.com",
+          phone: "0711234567",
+          price: 11000,
+          imgSrc: vehi6
+        }
+      ];
+
+      const handleSubmit = (card) => {
+        addCard(card);
+    };
+
   return (
     <div>
       <Navbar/>
@@ -37,29 +92,24 @@ function Vehicles() {
               <p className='vehicles-p2'>Cultural events, Tech events, corporate events, prom, parties, weddings, engagement parties, and others. Please choose from the options so we can help you plan your events.</p>
             <div class="vehicleServices">
               <div class="vehicle">
+                  
                   <div class="vehicle1">
-                    <div>
-                      <img src={vehi1} />
-                    </div>
-                    <div className='vehicle-para'>
-                      <p1>Mahesh Cab Services</p1>
-                      <p>mahesh@gmail.com</p>
-                      <p>0711234567</p>
-                      <p>LKR 12 000</p>
-                    </div>
-                    <button class="vehicle-choose">Choose</button>
+                  {vehicleData.map((vehicle, index) => (
+                <div className="card-vehicle" key={index}>
+                  <div className="card-img">
+                    <img src={vehicle.imgSrc} alt={vehicle.name} className="card-img" />
                   </div>
-                  <div class="vehicle2">
-                    <div>
-                      <img src={vehi2} />
-                    </div>
-                    <div className='vehicle-para'>
-                      <p1>Bashitha Rent A Car</p1>
-                      <p>bashitha@gmail.com</p>
-                      <p>0711234567</p>
-                      <p>LKR 10 000</p>
-                    </div>  
-                    <button class="vehicle-choose">Choose</button>
+                  <div className="card-details-vehicle">
+                    <h3>{vehicle.name}</h3>
+                    <p>{vehicle.email}</p>
+                    <p>{vehicle.phone}</p>
+                    <p>LKR {vehicle.price}</p>
+                  </div>
+                  <div className="card-btn">
+                    <button className="save-button" onClick={() => handleSubmit(vehicle)}>Choose</button>
+                  </div>
+                </div>
+              ))}
                   </div>
                   <div class="vehicle3">
                     <div>

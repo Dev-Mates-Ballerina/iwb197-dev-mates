@@ -1,59 +1,7 @@
-.sidebar1{
-    width: 5%;
-    padding: 20px;
-    justify-content: space-between;
-    margin-left: 2rem;
-    margin-top: 4rem;
-}
 
-.steps {
-    list-style-type: none;
-}
-
-.step {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ccc;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 4rem 0;
-}
-.step a{
-    color: white;
-    text-align: center;
-}
-.step a:hover{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #0b15a5;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 4rem 0;
-}
-
-.step.complete {
-    background-color: rgba(42, 218, 150, 0.493);
-    color: black;
-}
-
-.step.current {
-    background-color: blue;
-}
 .vehicles-main-content{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+    display: flex;
+
 }
 .vehicles-content{
     margin-top: 3rem;
