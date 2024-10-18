@@ -35,10 +35,10 @@ function Navbar() {
             <span class="nav-item">Register</span>
             </Link></li>
 
-            <li><a href="" class="logout">
+            <li><Link to="/serviceProvider/login" class="logout">
             <i class="fas fa-sign-out-alt"></i>
             <span class="nav-item">Log out</span>
-            </a></li>
+            </Link></li>
         </ul>
         </nav>
     </div>

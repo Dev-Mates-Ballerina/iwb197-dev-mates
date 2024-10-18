@@ -12,7 +12,7 @@ import ballerina/http;
     }
 }
 
-service /events on new http:Listener(8085) {
+service /charities on new http:Listener(8086) {
 
     @http:ResourceConfig {
         cors: {
@@ -21,12 +21,12 @@ service /events on new http:Listener(8085) {
     }
 
     // POST: Add new event
-    resource function post .(@http:Payload Event event) returns int|error? {
-        return saveEvents(event);
+    resource function post .(@http:Payload Charity charity) returns int|error? {
+        return saveCharity(charity);
     }
     // GET: Fetch all employees
-    resource function get .() returns Event[]|error? {
-        return getAllEvents();
+    resource function get .() returns Charity[]|error? {
+        return getAllCharities();
     }
 
 }

@@ -22,6 +22,8 @@ import Bookings from '../serviceProvider/Bookings/Bookings';
 import ServiceProvider from '../serviceProvider/ServiceProvider/ServiceProvider';
 import Account from '../pages/Account/Account';
 import Accounts from '../serviceProvider/Accounts/Accounts';
+import LoginS from '../serviceProvider/Auth/LoginS';
+import RegisterS from '../serviceProvider/Auth/RegisterS';
 
 function Routers() {
   return (
@@ -50,6 +52,8 @@ function Routers() {
         <Route exact path="/serviceProvider" element={<ServiceProvider />} />
         <Route exact path="/account" element={<Account />} />
         <Route exact path="/accounts" element={<Accounts />} />
+        <Route exact path="/serviceProvider/login" element={<LoginS />} />
+        <Route exact path="/serviceProvider/register" element={<RegisterS />} />
       </Routes>
     </BrowserRouter>
   );

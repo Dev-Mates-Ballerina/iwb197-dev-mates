@@ -3,7 +3,7 @@ import '../../css/Login.css';
 import logo from '../../images/logo.png';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const LoginS = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -56,7 +56,7 @@ const Login = () => {
       setIsAdmin(true);
       setIsAuthenticated(true);
       setLoginError(null);
-      navigate('/'); // Redirect to admin dashboard
+      navigate('/serviceProviderDashboard'); // Redirect to admin dashboard
       return;
     }
 
@@ -70,7 +70,7 @@ const Login = () => {
       setIsAuthenticated(true);
       setIsAdmin(false);
       setLoginError(null);
-      navigate('/'); // Redirect to regular user homepage
+      navigate('/serviceProviderDashboard'); // Redirect to regular user homepage
     } else {
       // Authentication failed
       setIsAuthenticated(false);
@@ -124,7 +124,7 @@ const Login = () => {
             {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
             <div className='text'>
               <h3>
-                Don't have an account? <a href='/register'>Register now</a>
+                Don't have an account? <a href='/serviceProvider/register'>Register now</a>
               </h3>
             </div>
           </form>
@@ -134,4 +134,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginS;

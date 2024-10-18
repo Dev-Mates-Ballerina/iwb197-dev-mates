@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../css/Register.css';
 import logo from '../../images/logo.png';
-import Login from './Login';
 
-const Register = () => {
+const RegisterS = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -95,7 +94,7 @@ const Register = () => {
       
       {/* Registered Users List */}
       
-        <h2>Registration</h2>
+        <h2>Be a Service Provider | Register</h2>
         <form onSubmit={handleSubmit} >
           <div className="input-box">
             <input
@@ -150,7 +149,7 @@ const Register = () => {
             <input type="submit" value="Register Now" />
           </div>
           <div className="text">
-            <h3>Already have an account? <a href="/login">Login now</a></h3>
+            <h3>Already have an account? <a href="/serviceProvider/login">Login now</a></h3>
           </div>
         </form>
 
@@ -160,4 +159,4 @@ const Register = () => {
   );
 }
 
-export default Register;
+export default RegisterS;

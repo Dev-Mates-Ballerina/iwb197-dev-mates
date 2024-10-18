@@ -18,6 +18,22 @@ public type Budget record {|
     string price; // Should also be hashed before storing
 |};
 
+public type Event record {|
+    int id?;
+    string name;
+    int budget;
+    string location;  // Only store the hashed password
+    string date; // Should also be hashed before storing
+|};
+
+public type Charity record {|
+    int id?;
+    string name;
+    string date;
+    string cause;  // Only store the hashed password
+    int amount; // Should also be hashed before storing
+|};
+
 
 configurable string USER = ?;
 configurable string PASSWORD = ?;
@@ -75,5 +91,68 @@ isolated function saveBudget(Budget budget) returns int|error {
     } else {
         return error("Unable to obtain last insert ID");
     }
+}
+
+isolated function saveEvents(Event event) returns int|error {
+    // Insert the plain text passwords into the database
+    sql:ExecutionResult result = check dbClient->execute(`
+        INSERT INTO events (id, name, budget, location, date)
+        VALUES (${event.id}, ${event.name}, ${event.budget}, 
+                ${event.location}, ${event.date})
+    `);
+
+    int|string? lastInsertId = result.lastInsertId;
+    if lastInsertId is int {
+        return lastInsertId;
+    } else {
+        return error("Unable to obtain last insert ID");
+    }
+}
+
+
+isolated function getAllEvents() returns Event[]|error {
+    Event[] events = [];
+    stream<Event, error?> resultStream = dbClient->query(
+        `SELECT * FROM events`
+    );
+    check from Event event in resultStream
+        do {
+            events.push(event);
+        };
+    check resultStream.close();
+    return events;
+}
+
+
+
+isolated function saveCharity(Charity charity) returns int|error {
+    // Insert the plain text passwords into the database
+    sql:ExecutionResult result = check dbClient->execute(`
+        INSERT INTO charity (id, name, date, cause, amount)
+        VALUES (${charity.id}, ${charity.name}, ${charity.date}, 
+                ${charity.cause}, ${charity.amount})
+    `);
+
+    int|string? lastInsertId = result.lastInsertId;
+    if lastInsertId is int {
+        return lastInsertId;
+    } else {
+        return error("Unable to obtain last insert ID");
+    }
+}
+
+
+
+isolated function getAllCharities() returns Charity[]|error {
+    Charity[] charities = [];
+    stream<Charity, error?> resultStream = dbClient->query(
+        `SELECT * FROM charity`
+    );
+    check from Charity charity in resultStream
+        do {
+            charities.push(charity);
+        };
+    check resultStream.close();
+    return charities;
 }
 
