@@ -41,7 +41,7 @@ The application uses the following database structure:
 - **Database Name**: `ballerina`
 - **Tables and Columns**:
   - `users - user_id(int),name,email,password,cpassword`
-  - `budget - id(int),name,email,phone,price,uname(NULL),uphone(NULL),date(NULL),ulocation(NULL)`
+  - `budget - id(int),name,email,phone,price,uname(NULL),uphone(NULL),udate(NULL),ulocation(NULL)`
   - `charity - id(int),name,date,cause,amount(int)`
   - `events - id(int),name,budget(int),location,date`
 
